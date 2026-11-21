@@ -3,6 +3,7 @@
 ## Unreleased
 
 ### Security
+- Rebuild the public PWA runtime from patched dependencies and remove obsolete generated bundles from the public source tree.
 - Publish a sanitized source history without deployment records, packaged archives, customer tax/store mappings or production-derived financial fixtures.
 - Require explicit installation configuration and add secret scanning, publication checks and dependency monitoring.
 

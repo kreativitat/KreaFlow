@@ -26,3 +26,5 @@ Enable the local fail-closed hook with `git config core.hooksPath .githooks` aft
 Use Node.js 22 or newer and `npm --prefix app ci`. Vite 6 and the matching PWA plugin include security fixes. The scoped `workbox-build` Glob override selects a patched compatible Glob release; remove it only after upstream Workbox resolves that dependency and the full audit/PWA build pass. Do not use `npm audit fix --force` as an unattended upgrade strategy.
 
 Dependency automation is limited to security updates. Version-update PR limits are zero; security updates retain their separate GitHub limit. See [GitHub security-update configuration](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/customizing-dependabot-security-prs).
+
+The public PWA entry bundle, root service worker and Workbox dependency are rebuilt from the patched lockfile. Obsolete generated bundles are excluded from this fresh publication. For an existing installed application, retain its previous hashed assets locally during a separately authorized deployment so updating clients can finish loading.
