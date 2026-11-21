@@ -1,0 +1,6 @@
+# Copyright (C) 2026 Kreativität Works <mail@kreativitat.com>
+# GPL-3.0-or-later. Merge this block into custom/.htaccess during folder retirement.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^dolizsynch(?:/(.*))?$ kreaflow/$1 [R=308,L]
+</IfModule>

@@ -1,0 +1,1072 @@
+# Copyright (C) 2026 Kreativität Works <mail@kreativitat.com>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License,
+# or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/>.
+#
+# Commercial support and integration services are available from
+# Kreativität Works <mail@kreativitat.com>.
+#
+
+#
+# Generic
+#
+
+# Module label 'ModuleDoliZSynchName'
+ModuleDoliZSynchName = KreaFlow
+# Module description 'ModuleDoliZSynchDesc'
+ModuleDoliZSynchDesc = KreaFlow Sincronizador ZoneSoft-Dolibarr
+DoliZSynchTab = KreaFlow
+VacationsYearTitle = Férias %s
+VacationMapTitle = Mapa de férias %s
+VacationMapAllMonths = Todos os meses
+VacationMapPeriods = Períodos de férias
+VacationMapExcel = Exportar Excel
+VacationMapSummary = Resumo anual
+VacationMapScheduled = Marcadas
+VacationMapEntitlement = Direito
+VacationMapUnplanned = Por marcar
+VacationMapElapsed = Marcadas antes de hoje
+VacationMapRemaining = Direito menos decorridas
+VacationMapWeekend = Fim de semana
+VacationMapPublicHoliday = Feriado
+VacationMapNavigation = Secções do mapa de férias
+VacationMapMethod = Dias corridos e parciais das férias registadas. Inclui fins de semana e feriados abrangidos pelos registos. Registos sobrepostos contam, no máximo, um dia por data. Os totais decorridos abrangem datas anteriores a %s e não confirmam o gozo efetivo. Um travessão indica que não existe quota definida. Os saldos usam a quota configurada, sem transferência automática de dias.
+VacationMapNoType = Não existe um tipo de ausência de férias configurado. Os restantes tipos de ausência não são incluídos.
+VacationMapReadError = Não foi possível carregar o mapa de férias. Tente novamente ou contacte um administrador.
+TestModuleDoliZSynchDesc = O módulo Sincronizador ZS-Dolibarr é uma solução integrada para conectar e sincronizar dados entre o Dolibarr ERP/CRM e o sistema ZSAPI (ZoneSoft API). Esta ferramenta robusta foi desenvolvida para automatizar e simplificar o fluxo de trabalho entre as duas plataformas, oferecendo uma experiência de gestão de negócios mais eficiente e coesa.
+TextoSelectorCategorias = CATEGORIAS DE PRODUTOS
+CronJobTitleGetInstancesToSyncFromZoneSoftProductsToDolibarr = DZ Agendamento de sincronização de artigos alterados na ZoneSoft
+CronJobComentGetInstancesToSyncFromZoneSoftProductsToDolibarr = DZ Agendamento de sincronização de artigos alterados na ZoneSoft
+CronJobTitleImportInvoicesHeaders = DZ Agendamento de sincronização de cabeçalhos de recibos
+CronJobComentImportInvoicesHeaders = DZ Agendamento de sincronização de cabeçalhos de recibos
+CronJobTitleSynchronizeAllUnsynchronizedInvoicesByStore = DZ Agendamento de sincronização de recibos
+CronJobComentSynchronizeAllUnsynchronizedInvoicesByStore = DZ Agendamento de sincronização de recibos
+CronJobTitleSynchronizeYesterdayInvoices = DZ Sincronização de recibos do dia anterior
+CronJobComentSynchronizeYesterdayInvoices = DZ Sincronização automática de todos os recibos do dia anterior
+PaymentForMultipleInvoicesFromRCDocument = Pagamento de múltiplos recibos a partir do documento RC ZoneSoft
+
+#
+# Admin page
+#
+DoliZSynchSetupPage = KreaFlow - página de configuração
+PlannerSetupTab = Picagens e Planeador
+DoliZSynchPlannerSetup = Configuração de picagens e planeador
+DoliZSynchPlannerSetupDesc = Configure a sincronização de picagens e as predefinições do planeador de turnos.
+DOLIZSYNCH_SYNC_HEALTH_TITLE = Saúde da sincronização e alertas
+DOLIZSYNCH_DASHBOARD_WINDOW_HOURS = Janela do painel (horas)
+DOLIZSYNCH_DASHBOARD_WINDOW_HOURS_HELP = Intervalo de tempo usado no resumo do painel.
+DOLIZSYNCH_DASHBOARD_TREND_DAYS = Tendência de erros (dias)
+DOLIZSYNCH_DASHBOARD_TREND_DAYS_HELP = Número de dias mostrados na tendência de erros.
+DOLIZSYNCH_NOTIFY_WINDOW_HOURS = Janela de notificação (horas)
+DOLIZSYNCH_NOTIFY_WINDOW_HOURS_HELP = Intervalo de tempo usado para avaliar os alertas.
+DOLIZSYNCH_NOTIFY_ERROR_THRESHOLD = Limite de erros (quantidade)
+DOLIZSYNCH_NOTIFY_ERROR_THRESHOLD_HELP = Enviar alertas quando os erros atingirem ou excederem este valor. Use 0 para desativar.
+DOLIZSYNCH_NOTIFY_SUCCESS_RATE_THRESHOLD = Limite de sucesso (%)
+DOLIZSYNCH_NOTIFY_SUCCESS_RATE_THRESHOLD_HELP = Enviar alertas quando a taxa de sucesso ficar abaixo deste valor.
+DOLIZSYNCH_NOTIFY_LATENCY_THRESHOLD_MINUTES = Limite de latência média (minutos)
+DOLIZSYNCH_NOTIFY_LATENCY_THRESHOLD_MINUTES_HELP = Enviar alertas quando a latência média exceder este valor. Use 0 para desativar.
+DOLIZSYNCH_NOTIFY_COOLDOWN_MINUTES = Intervalo entre alertas (minutos)
+DOLIZSYNCH_NOTIFY_COOLDOWN_MINUTES_HELP = Tempo mínimo entre alertas repetidos com os mesmos problemas.
+DOLIZSYNCH_NOTIFY_EMAIL_ENABLED = Ativar alertas por email
+DOLIZSYNCH_NOTIFY_EMAIL_TO = Destinatários de alertas
+DOLIZSYNCH_NOTIFY_EMAIL_TO_HELP = Lista de emails separada por vírgulas.
+DOLIZSYNCH_NOTIFY_EMAIL_SUBJECT_PREFIX = Prefixo do assunto do email
+DOLIZSYNCH_NOTIFY_EMAIL_SUBJECT_PREFIX_HELP = Prefixo adicionado aos assuntos dos alertas.
+DOLIZSYNCH_LOGGING_TITLE = Registos
+DOLIZSYNCH_ENABLE_DEBUG_LOGS = Ativar registos de depuração
+DOLIZSYNCH_ENABLE_DEBUG_LOGS_HELP = Quando ativo, escreve registos de depuração detalhados do KreaFlow. Mantenha desativado em produção, exceto para diagnóstico.
+SyncHealth = Saúde da sincronização
+SyncHealthDashboard = Painel de saúde da sincronização
+SyncHealthInfo = Monitorize a saúde recente da sincronização e os limites de alerta.
+SyncHealthWindowLabel = Janela
+SyncHealthWindowValue = Últimas %s horas
+SyncHealthTotal = Total
+SyncHealthProcessed = Processados
+SyncHealthSuccessRate = Taxa de sucesso
+SyncHealthAverageLatency = Latência média
+SyncHealthP95Latency = Latência P95
+SyncHealthMaxLatency = Latência máxima
+SyncHealthErrors = Erros
+SyncHealthPending = Pendentes
+SyncHealthProcessing = Em processamento
+SyncHealthErrorTrend = Tendência de erros
+SyncHealthTopErrors = Principais erros
+SyncHealthNoData = Sem dados na janela selecionada.
+SyncHealthNoErrors = Sem erros na janela selecionada.
+SyncHealthNotifications = Notificações
+SyncHealthChannel = Canal
+SyncHealthStatus = Estado
+SyncHealthDetails = Detalhes
+SyncHealthThresholds = Limites de alerta
+SyncHealthMetric = Métrica
+SyncHealthTrendCount = Contagem
+SyncHealthTrendBar = Tendência
+SyncHealthCrossDomain = Saúde transversal (produtos, ponto, API)
+SyncHealthProductsEnabled = Produtos com sincronização ativa
+SyncHealthProductsMapped = Produtos mapeados no ZSBMS
+SyncHealthProductsUnmapped = Produtos ativos sem mapeamento
+SyncHealthProductsRecentErrors = Erros de sincronização de produtos (janela)
+SyncHealthPunchPending = Registos de ponto pendentes
+SyncHealthPunchUnpaired = Registos de ponto sem par
+SyncHealthPunchSynthetic = Registos sintéticos pendentes
+SyncHealthApiRetries = Retries da API (janela)
+SyncHealthApiRateLimit = Eventos 429 da API
+SyncHealthApiRetryExhausted = Retries da API esgotados
+SyncHealthTopProductErrors = Principais erros de sincronização de produtos
+SyncHealthTopApiEvents = Principais eventos de retry/rate-limit da API
+SyncHealthNoApiEvents = Sem eventos de retry/rate-limit da API na janela selecionada.
+SyncHealthNotAvailable = Não disponível
+SyncHealthTestNotification = Enviar notificação de teste
+SyncHealthTestDescription = Envia uma mensagem de teste usando os canais configurados.
+SyncHealthTestSuccess = Notificação de teste enviada.
+SyncHealthTestFailed = Falha ao enviar notificação de teste. Verifique a configuração.
+DOLIZSYNCH_REPORT_LEAVE_COLUMNS_TITLE = Definições de relatório de ausências
+DOLIZSYNCH_REPORT_LEAVE_COLUMNS = Mapeamento de colunas de ausência
+DOLIZSYNCH_REPORT_DAYOFF_AS_ABSENCE = Contar folga como falta
+DOLIZSYNCH_REPORT_DAYOFF_AS_ABSENCE_HELP = Quando ativo, a folga adjacente a uma falta injustificada conta como falta
+DOLIZSYNCH_PUBLIC_HOLIDAY_COUNTRY = País para feriados públicos
+ZS_API_HOST_TITLE = Configurações de acesso à API da Zone Soft
+ZS_API_HOST = ZonSoft API Host
+ZS_API_VERSION = ZonSoft API Version
+ZS_APP_KEY = App Key
+ZS_APP_SECRET = App Secret
+ZS_CLIENT_ID = Client ID da loja ZonSoft
+ZS_API_NAME = API User Name
+ZS_API_NIF = API User Name NIF
+ZS_API_NIF_PLACEHOLDER = API User Name NIF
+ZS_API_PASSWORD = API User Password
+ZS_API_PASSWORD_PLACEHOLDER = API User Password
+ZS_API_STORE = Numero de Loja ZonSoft
+ZS_API_STORE_PLACEHOLDER = Numero de Loja ZonSoft
+ZS_IVA_INCLUIDO = IVA Incluido
+ZS_GET_NUMBER_OF_INVOICES_LIMIT = Numero maximo de recibos recolhidos no download
+ZS_GET_NUMBER_OF_INVOICES_LIMIT_PLACEHOLDER = Numero maximo de recibos recolhidos no download
+ZS_AUTO_SYNCH_CHANGED_PRODUCT_TO_ZS = Auto sincronizar alterações de produto para o ZSBMS
+ZS_PRODUTS_CHANGED_LAST_X_MINUTES = Sincronizar apenas produtos alterados nos ultimos M minutos
+ZS_PRODUTS_CHANGED_LAST_X_MINUTES_PLACEHOLDER = Sincronizar apenas produtos alterados nos ultimos M minutos
+ZS_SYNC_INVOICES_TITLE = Sincronização de faturas
+ZS_SYNC_PRODUCTS_TITLE = Sincronização de produtos
+SHIFT_PLANNER_SETTINGS_TITLE = Planeador de Turnos
+DOLIZSYNCH_SHIFT_DAY_START_DAY_END = Hora de inicio e fim do planeador
+DOLIZSYNCH_SHIFT_DAY_START = Início
+DOLIZSYNCH_SHIFT_DAY_END = Fim
+ShiftPlannerDayWindowHelp = Define o período diário apresentado no planeador (mínimo 8h, máximo 24h). Deixe em branco para usar 07:00 a 00:00.
+DOLIZSYNCH_SHIFT_MINUTE_STEP = Passo de minutos entre as opções de horário (5, 10, 15, 30…)
+DOLIZSYNCH_SHIFT_CAP_NORMAL_TO_CONTRACT = Limitar horas normais (N) ao contrato
+normalHoursCapExceeded = Horas normais excedem o limite contratado.
+DOLIZSYNCH_SHIFT_EMPLOYEE_GROUP = Grupo padrão de funcionários incluídos no planeador
+DOLIZSYNCH_DAYOFF_COLOR = Cor de fundo para dias de folga (ex.: #bababa)
+DOLIZSYNCH_LEAVE_COLOR = Cor de fundo para ausências/folgas (ex.: #bababa)
+DOLIZSYNCH_EMPLOYMENT_COLOR = Cor usada para períodos fora do vínculo (ex.: #bababa)
+DOLIZSYNCH_LEAVE_COLORS_TITLE = Configuração de cores
+DoliZSynchLeaveColorHelp = Cor usada para o tipo de ausência %s.
+DoliZSynchLeaveColorPreview = Exemplo para %s
+ZS_CONSUMIDOR_FINAL = ID de Terceiro para atribuição de fatura de cliente "CONSUMIDOR FINAL"
+ZS_CREATE_NEW_CUSTOMERS = Na importação de faturas criar novo cliente se não existir
+ZS_DEFAULT_PRODUCT_CATEGORY = Categoria de produtos ZoneSoft por defeito para sincronização de produtos
+ZS_DEFAULT_PRODUCT_FAMILY = Familia de produtos ZoneSoft por defeito para sincronização de produtos
+ZS_DEFAULT_PAYMENT_TYPE = Metodo de pagamento ZoneSoft por defeito para sincronização de Faturas
+ZS_DEFAULT_PRODUCT_UNIT = Unidades de produtos ZoneSoft por defeito para sincronização de produtos
+SynchronizationConcluded = Sincronização concluida!
+Synch = Sincronizar
+SYNCH_ALL_ZS_PRODUCTS_WITH_LOCAL_TABLE_DESCRIPTION = Sincronização dos produtos
+SYNCH_ALL_ZS_UNITS_WITH_LOCAL_TABLE_DESCRIPTION = Sincronização das unidades
+SYNCH_ALL_ZS_FAMILIES_WITH_LOCAL_TABLE_DESCRIPTION = Sincronização das familias
+SYNCH_ALL_ZS_PAYMENTTYPES_WITH_LOCAL_TABLE_DESCRIPTION = Sincronização dos metodos de pagamento
+SYNCH_ALL_ZS_PRODCENTRES_WITH_LOCAL_TABLE_DESCRIPTION = Sincronização dos centros de produção
+SYNCH_ALL_ZS_CATEGORIES_WITH_LOCAL_TABLE_DESCRIPTION = Sincronização das categorias de produtos
+SYNCH_ALL_ZS_INVOICES_HEADERS = Forçar sincronização dos cabeçalhos dos recibos
+SYNCH_ALL_ZS_INVOICES = Forçar sincronização dos ultimos recibos (pode ser necessário executar diversas vezes)
+ZS_GET_NUMBER_OF_PRODUCTS_LIMIT = Lote de produtos sincronizados em cada consulta (recomendado 15)
+ZS_GET_NUMBER_OF_PRODUCTS_LIMIT_PLACEHOLDER = Lote de produtos sincronizados em cada consulta (recomendado 15)
+ZS_GET_PRODUCTS_OFFSET = Offset de lote de produtos sincronizados em cada consulta (recomendado igual ao anterior)
+ZS_GET_PRODUCTS_OFFSET_PLACEHOLDER = Offset de lote de produtos sincronizados em cada consulta (recomendado igual ao anterior)
+ZS_STORES_PRODUCT_CHANGES = Lojas ZS onde alrerações de produtos serão gravadas
+SelectEntitiesForProductCreation = Selecione as entidades onde os produtos serão criados automaticamente
+DOLIZSYNCH_FORCE_SYNCH_INVOICE_TABLE_HEADER = Forçar sincronização de um documento especifico
+DOLIZSYNCH_FORCE_SYNCH_INVOICE_DATA = Data do documento
+DOLIZSYNCH_FORCE_SYNCH_INVOICE_DOC = Tipo de documento (FS,FT, etc.)
+DOLIZSYNCH_FORCE_SYNCH_INVOICE_SERIE = Serie do documento
+DOLIZSYNCH_FORCE_SYNCH_INVOICE_NUMERO = Numero do documento
+DoliZSynchErrorInvoiceNotFound = Documento não encontrado
+DoliZSynchValidationSyncEnabledNoStore = Atenção: A sincronização está ativada mas nenhuma loja foi selecionada. Selecione pelo menos uma loja na opção "Loja para actualizacao do produto (ZS)" para continuar.
+DoliZSynchProductCreatedWithoutSync = O produto foi criado sem a opção de sincronização com o ZSBMS
+ZSVariablePrice = Preço Variável (ZS)
+ZSVariablePriceHelp = Quando ativado, o preço será inserido no ponto de venda. O preço é definido como -1 no ZoneSoft BMS.
+ForceSynchronization = ZS SYNCH
+ZS_ADJUSTMENT_PRODUCT_ID = Produto por defeito para acerto de valores
+ZS_GENERIC_PRODUCT_ID = Produto genérico para faturas não encontradas no Zone Soft
+InvoiceSyncSummary = Sincronização concluída: %s fatura(s) processada(s), %s com sucesso, %s com erro(s)
+ErrorFetchingInvoices = Erro ao buscar faturas para sincronização
+CreatedWithoutZoneSoft = Criada sem dados do Zone Soft
+CreatedWithoutZoneSoftHelp = Esta fatura foi criada com produto genérico porque não foi encontrada no Zone Soft
+ZS_CREDIT_NOTE_REFUND_MODE = Método de reembolso para notas de crédito
+OriginalPaymentMethod = Método de pagamento original
+CashRefund = Reembolso em dinheiro
+ZS_CASH_PAYMENT_TYPE_ID = Tipo de pagamento para reembolsos em dinheiro
+ZS_ROUNDING_PRODUCT_ID = Produto para arredondamentos em faturas inter-entidade
+ZS_PAYMENT_TERM_ID = Prazo de pagamento para faturas inter-entidade
+ZS_PUNCH_CLOCK = Picagens de Ponto
+ZSPunchClockList = Picagens de Ponto
+ZSPunchClockSynchRawData = Picagens de Ponto de Hoje
+ZS_PUNCH_CLOCK_ACTIVATE = Activar a sincronização de picagens de ponto 
+ZS_PUNCH_CLOCK_ACTIVATE_PLACEHOLDER = Activar a sincronização de picagens de ponto 
+ZS_PUNCH_CLOCK_NUMBER_OF_DAYS_PLACEHOLDER = Numero de dias
+ZS_PUNCH_CLOCK_NUMBER_OF_DAYS = Numero de dias a sincronizar em cada chamada
+ZS_PUNCH_DAY_CHANGE_HOUR = Hora de alteração de data para o dia seguinte
+ZS_PUNCH_DAY_CHANGE_HOUR_PLACEHOLDER = Numero de horas
+ZS_PUNCH_HOUR_NOTIFY = Hora de notificação pelo Telegram
+ZS_PUNCH_HOUR_NOTIFY_PLACEHOLDER = Numero de horas
+ZS_PRODUCT_COLORS_TITLE = Cores dos Botões de Produtos
+ZS_DEFAULT_BUTTON_BACKGROUND_COLOR = Cor de fundo do botão de produto (ZS)
+ZS_DEFAULT_BUTTON_BACKGROUND_COLOR_HELP = Cor de fundo padrão para os botões de produtos no ZoneSoft BMS. Valor padrão: RGB(105,105,105)
+ZS_DEFAULT_BUTTON_FONT_COLOR = Cor da letra do botão de produto (ZS)
+ZS_DEFAULT_BUTTON_FONT_COLOR_HELP = Cor da letra padrão para os botões de produtos no ZoneSoft BMS. Valor padrão: RGB(255,255,255)
+ZS_SYNC_TELEGRAM_TITLE = Notificações por Telegram
+ZS_TELEGRAM_CHAT_ID = Chat ID
+ZS_TELEGRAM_CHAT_ID_PLACEHOLDER = Para obter o ID do chat, envie \"/start\" no chat do Telegram. O ID do chat será mostrado no início da conversa.
+ZS_TELEGRAM_API_KEY = API Key
+ZS_TELEGRAM_API_KEY_PLACEHOLDER = Para obter uma API key do Telegram, crie um bot através do BotFather. No chat do Telegram, envie \"/start\" e depois \"/newbot\". Siga as instruções, escolha um nome e um username para o bot. O BotFather fornecerá a API key após a criação.
+TelegramSetup = Configuração Telegram
+TelegramSetupInstructions = Como configurar o Telegram Bot
+TelegramStep1 = Criar um Bot no Telegram
+TelegramStep1Details = Abra o Telegram, procure por @BotFather e crie um novo bot. Anote o token API que o BotFather lhe fornece.
+TelegramStep2 = Obter o Chat ID
+TelegramStep2Details = Para obter o Chat ID, inicie uma conversa com o seu bot e depois aceda ao seguinte URL no seu navegador (substitua YOUR_BOT_TOKEN pelo token que obteve no passo 1):
+TelegramStep2Alternative = Alternativamente, pode adicionar o bot
+TelegramStep3 = Configurar abaixo
+TelegramStep3Details = Introduza o Chat ID e a API Key nos campos abaixo e guarde a configuração.
+TelegramChatIdPlaceholder = Ex: 123456789 ou -987654321
+TelegramApiKeyPlaceholder = Ex: 123456789:ABCdefGHIjklMNOpqrsTUVwxyz
+TelegramNotifyHourHelp = Hora do dia para enviar notificações (0-23)
+TelegramTestSection = Testar Configuração
+TelegramTestDescription = Envie uma mensagem de teste para verificar se a configuração está correcta.
+SendTestMessage = Enviar Mensagem de Teste
+TelegramTestSuccess = Mensagem de teste enviada com sucesso! Verifique o seu chat no Telegram.
+TelegramTestFailed = Erro ao enviar mensagem de teste. Verifique a configuração (Chat ID e API Key).
+TelegramGroupChatTitle = Configurar para Grupo do Telegram
+TelegramGroupChatIntro = Para enviar notificações para um grupo em vez de um chat privado, siga estes passos:
+TelegramGroupStep1 = Crie um novo grupo no Telegram ou use um grupo existente
+TelegramGroupStep2 = Adicione o seu bot ao grupo (procure pelo username do bot e adicione-o como membro)
+TelegramGroupStep3 = Envie uma mensagem qualquer no grupo (ex: "teste") e depois aceda ao URL:
+TelegramGroupStep3Details = Procure por "chat":{"id": no resultado. O ID do grupo é normalmente um número negativo (ex: -987654321)
+TelegramGroupStep4 = Copie o Chat ID do grupo (número negativo) e cole no campo acima
+TelegramGroupNote = Para grupos, o Chat ID é sempre um número negativo. Para chats privados, é um número positivo.
+DOLIZSYNCH_FORCE_SYNCH_INVOICE_DATE_RANGE_HEADER = Forçar sincronização de cabeçalhos de documentos por data
+InitialDate = Data inicial
+EndDate = Data final
+INITIAL_DATE_SMALLER_THEN_END_DATE = Data inicial tem de ser menor ou igual a data final
+ZS_DEFAULT_BANK_ACCOUNT = Conta bancária pré-definida
+ZS_DEFAULT_BANK_ACCOUNT_PLACEHOLDER = Conta bancária pré-definida para sincronização de Faturas
+ZS_MAX_NUMBER_OF_INVOICES_IN_EACH_SYNCHRONIZATION = Numero maximo de recibos sincronizados por cada chamada de sincronização
+ZS_MAX_NUMBER_OF_INVOICES_IN_EACH_SYNCHRONIZATION_PLACEHOLDER = Numero maximo de recibos sincronizados por cada chamada de sincronização
+ZS_MAX_SYNCH_TRIES_PER_INVOICE = Numero maximo de tentativas de sincronizacao por recibo antes de abandonar
+ZS_MAX_SYNCH_TRIES_PER_INVOICE_PLACEHOLDER = Numero maximo de tentativas de sincronizacao por recibo antes de abandonar
+ZS_PUNCH_CLOCK_DATE_RANGE_HEADER = Forçar sincronização de picagens de ponto
+
+#
+# Mapping page
+#
+DoliZSynchMapping = KreaFlow Mapeamentos
+DoliZSynchMappingPage = KreaFlow - página de mapeamentos
+MappingsOriginZoneSoft = ZoneSoft
+MappingsDestinDolibarr = Dolibarr
+TitleMapFamilies = Mapeamento de Familias / Categorias
+TitleMapPaymentTypes = Mapeamento de Metodos de Pagamento
+TitleMapUnits = Mapeamento de Unidades
+TitleMapBankAccounts = Mapeamento de Contas
+SelectZapiOptionFamily = FAMILIA
+SelectZapiOptionPaymentType = METODO DE PAGAMENTO ZONESOFT
+SelectDolibarrOptionPaymentType = METODO DE PAGAMENTO DOLIBARR
+SelectZapiOptionUnit = UNIDADES DE PRODUTOS ZONESOFT
+SelectDolibarrOptionUnit = UNIDADES DE PRODUTOS DOLIBARR
+SelectDolibarrOptionBankAccount = CONTAS DOLIBARR
+MappingPartialSuccess = Mapeamentos gravados com avisos: %s alteração(ões), %s erro(s)
+MappingUpdateError = Erro ao gravar mapeamentos (%s erro(s))
+MappingUpdateSuccess = Mapeamentos gravados com sucesso (%s alteração(ões))
+MappingNoChanges = Sem alterações para gravar
+ErrorFetchingMappings = Erro ao carregar mapeamentos
+TablesSynch = Sincronização de tabelas
+DoliZSynchSetup = KreaFlow setup
+Settings = Configurações
+PartialDay = Dia parcial
+FullDay = Dia completo
+PeriodTime = Período horário (hh:mm a hh:mm)
+DurationMinutes = Tempo (minutos)
+PartialLeaveSameDay = As ausências parciais devem ficar no mesmo dia
+ErrorPartialLeaveSameDay = Ausências parciais devem ter datas de início e fim no mesmo dia
+DateStartEnd = Datas de início / fim
+Start = Início
+End = Fim
+TitleMapStoreEntity = Mapeamento de lojas / entidades
+StoreMapAutoSeedInfo = Mapa de lojas/entity é preenchido automaticamente na tabela llx_dolizsynch_storemap na primeira instalação.
+ZSBMSStore = Loja ZSBMS
+DolibarrEntity = Entidade Dolibarr
+StoreNIF = NIF da loja
+ErrorUpdateStoreMap = Erro ao gravar o mapa de lojas/entidades
+StoreMapSaved = Mapa de lojas/entidades gravado
+ErrorCreateStoreMapTable = Erro a criar a tabela do mapa de lojas/entidades
+ErrorInsertStoreMapDefault = Erro ao inserir dados padrão do mapa de lojas/entidades
+
+#
+# Products card page
+#
+DoliZSynchProductTitle = KreaFlow Configurações ZoneSoft
+DoliZSynchProductBackgroundColorSelector = Cor de fundo do botão de produto (ZS)
+DoliZSynchProductFontColorSelector = Cor da letra do botão de produto (ZS)
+DoliZSynchRetalhoVendidoClienteFinal = Venda
+DoliZSynchRetalhoSoBackOffice = Backoffice
+DoliZSynchRetalhoDescontinuado = Descontinuado
+DoliZSynchRetalho = Vender (ZS)
+DoliZSynchVenderSemStock = Permitir vender sem stock (ZS)
+DoliZSynchProductCompostoVendaMercadoria = Venda + Mercadoria (Com Stock)
+DoliZSynchProductCompostoMercadoria = Mercadoria
+DoliZSynchProductCompostoVenda = Venda (Sem Stock)
+DoliZSynchProductCompostoTransformado = Transformado
+DoliZSynchProductCompostoProducao = Producao Intermedia
+DoliZSynchProductCompostoMenu = Menu
+DoliZSynchProductFamily = Familia do produto (ZS)
+DoliZSynchProductCategory = Categoria do produto (ZS)
+DoliZSynchProductGroup = Grupo do produto (ZS)
+DoliZSynchProductCompany = Loja para actualizacao do produto (ZS)
+DoliZSynchDescricaoCurta = Descricao curta (ZS)
+DoliZSynchProdutoComposto = Tipo de Produto (Menu, Venda, Mercadoria) (ZS)
+DoliZSynchProductUnit = Unidade (ZS)
+DoliZSynchProductUnitCompra = Unidade de compra (ZS)
+DoliZSynchProductUnitInventario = Unidade de inventario (ZS)
+DoliZSynchForceSyncButton = Sincronizar
+DoliZSynchForceSynchProductToZoneSoft = Forçar sincro ZS (LOJA store) -> Dolibarr
+DoliZSynchTypeProductProdutos = Produtos
+DoliZSynchTypeProductServicos = Servicos
+DoliZSynchTypeProductOutros = Outros (Ex: portes debitados, adiantamentos recebidos)
+DoliZSynchTypeProductImpostos = Impostos, taxas e encargos parafiscais - exceto IVA e IS
+DoliZSynchTypeProductSaidaCaixa = Saida de Caixa
+DoliZSynchTypeProductEntradaCaixa = Entrada de Caixa
+DoliZSynchTypeProductVoucher = Voucher
+DoliZSynchTypeProductConsumoMinimo = Consumo Minimo
+DoliZSynchTypeProductCarregamentoCashless = Carregamento Cashless
+DoliZSynchProcuctTipoProduto = Tipo de Produto (ZS)
+DoliZSynchDoNotSynch = Não Sincronizar com a ZoneSoft (ZS)
+DoliZSynchSynch = Sincronizar com a ZoneSoft (ZS)
+DoliZSynchRetencao = Retenção na fonte (ZS)
+NotSelected = Não Selecionado
+ZSDoNotSynch = Não sincronizar produto (ZS)
+ZSSynch = Activar sincronização ZSBMS do produto (ZS)
+DoliZSynchProductMenu = Menu (ZS)
+DoliZSynchQuebraFimDia = Quebra de fim de dia (ZS)
+RetalhoForCompany = Disponibilidade
+DoliZSynchProdutoBalanca = Introdução de quantidade (ZS)
+DoliZSynchIsencao = Isenção (ZS)
+DoliZSynchIva2 = IVA 2 (ZS)
+DoliZSynchIvaCompra = IVA compra (ZS)
+DoliZSynchIvaRevenda = IVA revenda (ZS)
+DoliZSynchProductBalancaNormal = Normal
+DoliZSynchProductBalancaBalanca = Atraves de balanca
+DoliZSynchProductBalancaPedirQuantidade = Pedir quantidade ao lancar
+DoliZSynchProductBalancaQuantidadePendente = Quantidade pendente antes de fechar conta
+DoliZSynchProductBalancaPedeValor = Pede valor ao lancar
+ProductCreatedInMultipleStores = Produto criado com sucesso em %s lojas ZoneSoft
+ProductCreatedInZoneSoft = Produto criado com sucesso no ZSBMS
+ProductUpdatedInZSBMS = Produto atualizado com sucesso no ZSBMS
+WarningProductNotSyncedToZSBMS = Aviso: Produto não foi sincronizado no ZSBMS
+WarningBarcodeWasTruncated = Aviso: Código de barras foi truncado de %s para %s caracteres (máximo permitido)
+
+#
+# PunchClock
+#
+ListTaskTimeForPunchClock = Picagens de ponto
+TaskDateAndTheInitialDateMustBeTheSame = As datas da tarefa e da data inicial tem de ser iguais
+TheEndTimeMustBeGreaterThanTheStartTime = A hora de fim tem de ser maior que a hora de inicio
+FirstName = Nome
+LastName = Sobrenome
+FullName = Nome
+EmpID = ID ZoneSoft
+DataHora = Data e Hora
+DataVal = Dia de Referencia
+Picagens_de_hoje = Picagens de Hoje
+PunchClock_ProjectTask = Picagens de Ponto do Dia Pretendido
+Datahora_in = Data e Hora de Entrada
+Datahora_out = Data e Hora de Saida
+PunchClock_Employee = Empregado
+zspunchclock_fullname = Nome
+zspunchclock_employee_id = ID Funcionario
+zspunchclock_in_out = Sentido
+zspunchclock_datahora = Hora de Entrada
+zspunchclock_dataval = Dia de Referencia
+zspunchclock_actions = Acção
+EnterEditMode = Entrar em Modo de Edição
+LeaveEditMode = Sair do Modo de Edição
+AddFirstEntry = Adicionar Primeira Picagem
+TotalDay = Total Dia
+ShiftDuration = Duração Turno
+ShiftOverlapError = Conflito com turno existente
+ZSPunchClockAllList = Picagens listagem
+PunchClockAllListMenu = Picagens listagem
+PunchClockDateStart = Start date
+PunchClockDateEnd = End date
+PunchClockReferenceDay = Reference day
+PunchClockSource = Source
+PunchClockSourceZoneSoft = ZoneSoft
+PunchClockSourceManual = Manual
+PunchClockTask = Task
+PunchClockModifiedBy = Modified by
+PunchClockRows = Rows
+CheckInTime = Entrada
+CheckOutTime = Saida
+TimeHour = Hora
+
+#
+# About page
+#
+About = About
+DoliZSynchAbout = About KreaFlow
+DoliZSynchAboutPage = KreaFlow about page
+
+#
+# Sample page
+#
+DoliZSynchArea = Home KreaFlow
+MyPageName = My page name
+
+#
+# Sample widget
+#
+MyWidget = My widget
+MyWidgetDescription = My widget description
+
+#
+# Product Creation in ZSBMS
+#
+ProductNotFoundInZSBMS = Produto Não Encontrado no ZSBMS
+ProductNotFoundCreatePrompt = O produto '%s' não foi encontrado no ZSBMS. Deseja criá-lo?
+CreateProductInZSBMS = Criar produto no ZSBMS?
+NumberingMethod = Método de numeração
+AutomaticNumbering = Usar numeração automática do ZSBMS
+UseCurrentRef = Usar referência atual do produto
+UsingDefaultStore = Usando loja padrão (nenhuma loja configurada)
+Store = Loja
+ProductCreatedInDolibarr = Produto Criado no Dolibarr
+ProductCreatedCreateInZSBMS = O produto '%s' foi criado no Dolibarr. Deseja criá-lo também no ZSBMS?
+
+#
+# Invoice Creation in ZSBMS
+#
+CREATE_ZSBMS_INVOICE = Criar fatura ZSBMS a partir de fatura Dolibarr
+CREATE_ZSBMS_INVOICE_DESC = Cria um documento no ZSBMS usando invoicedocuments/saveInstance ou workingdocuments/saveInstance.
+DolibarrInvoiceID = ID da fatura Dolibarr
+ZSBMSClientID = ID cliente ZSBMS
+ZSBMSClientSelection = Cliente
+ZSBMSClientVAT = NIF / VAT
+ZSBMSClientSelectionHelp = Pesquise por nome ou NIF/VAT. Se nao existir no ZSBMS, o cliente sera criado automaticamente.
+ZSBMSClientSelectionRequired = Selecione um cliente antes de criar o documento.
+ZSBMSSelectedClientNotFound = O cliente selecionado nao foi encontrado no Dolibarr.
+ZSBMSClientResolveFailed = Nao foi possivel encontrar ou criar este cliente no ZSBMS.
+ZSBMSClientAutoCreated = Cliente criado automaticamente no ZSBMS com ID %s.
+ZSBMSSupplierID = ID fornecedor ZSBMS
+ZSBMSPaymentTypeID = ID pagamento ZSBMS
+ZSBMSPaymentType = Tipo de pagamento ZSBMS
+ZSBMSPaymentTypeMissing = Nao foram encontrados tipos de pagamento sincronizados. Sincronize em Configuracao.
+ZSBMSInvoiceCreateSuccess = Fatura ZSBMS criada com sucesso
+ZSBMSInvoiceCreateFailed = Falha ao criar fatura ZSBMS
+ZSBMSInvoiceCreateException = Erro ao criar fatura ZSBMS
+PleaseEnterValidInvoiceId = Indique um ID de fatura Dolibarr valido
+ZSBMSInvoiceCreatorTab = Criador de Faturas ZSBMS
+ZSBMSInvoiceCreatorPage = Criador de Faturas ZSBMS
+ZSBMSInvoiceCreatorDescription = Crie manualmente documentos no ZSBMS com cabecalho e linhas personalizadas.
+ZSBMSInvoiceHeader = Cabecalho do documento
+DeliveryData = Dados de entrega
+DeliveryAddress = Morada
+DeliveryContact = Contacto
+DeliveryDate = Data de entrega
+PickupDate = Data de levantamento
+LineProductCode = Codigo do produto
+LineQuantity = Quantidade
+LineUnitPrice = Preco unitario
+LineDiscount = Desconto
+LineObs = Observacoes
+LineWarehouse = Armazem
+AddLine = Adicionar linha
+RemoveLine = Remover
+ZSBMSInvoiceLines = Linhas do documento
+RemoveEmptyLines = Remover linhas vazias
+ClearLines = Limpar linhas
+ActiveLines = Linhas ativas
+TotalQuantity = Quantidade total
+EstimatedAmount = Valor estimado
+ZSBMSNeedAtLeastOneLine = Adicione pelo menos uma linha valida antes de submeter.
+ZSBMSInvalidRowsCount = Reveja %d linha(s) invalida(s).
+ZSBMSInvalidRowsDetails = Reveja {count} linha(s) invalida(s): {rows}.
+CreateInvoiceInZSBMS = Criar fatura no ZSBMS
+CreateInvoiceInZSBMSConfirm = Confirmar criacao no ZSBMS para a fatura %s?
+ZSBMSPaymentTypeEmpty = Sem pagamento selecionado
+ZSBMSRefreshKeepDraftTitle = Recarregar esta pagina e restaurar os valores atuais do rascunho.
+OpenZSBMSCreatorFromInvoice = Criador ZSBMS
+
+#
+# Product fields
+#
+DoliZSynchCodigoPP = PLU (ZS) - Max: 999999
+DoliZSynchCodbarras = Código de Barras (ZS)
+DoliZSynchProdutosCodigosBarras = Barcode list (ZS)
+DoliZSynchReferencia = Referência (ZS)
+DoliZSynchTempoPrep = Tempo de preparação (ZS)
+DoliZSynchPrepagamento = Pré-pagamento (ZS)
+DoliZSynchTopo = Incluir na lista de mais vendidos (ZS)
+DoliZSynchRevenda = Incluir na lista de revenda (ZS)
+DoliZSynchExcluirDescontos = Excluir dos descontos (ZS)
+DoliZSynchFuel = Combustível (ZS)
+DoliZSynchTransferivel = Pode ser transferido (ZS)
+
+#
+# Sync Tools Page
+#
+SyncTools = Ferramentas de Sincronização
+ToolsColumn = Ferramentas
+DoliZSynchSyncTools = Ferramentas de Sincronização KreaFlow
+DoliZSynchSyncToolsDescription = Configure a sincronização agendada e execute operações de sincronização da ZoneSoft para a entidade ativa.
+InvoiceSynchronizationTools = Sincronização de faturas de cliente
+InvoiceCorrectionTools = Ferramentas de correção de faturas
+FIX_MISSING_REFERENCES = Corrigir referências de faturas em falta
+FIX_MISSING_REFERENCES_DESC = Localizar e atualizar faturas com fk_facture=0 através do campo adicional invoice_number
+FIX_CANCELED_INVOICES_BETWEEN_DATES = Corrigir faturas canceladas entre datas
+FIX_CANCELED_INVOICES_DESC = Corrigir faturas que deveriam estar canceladas, mas não estão (remove pagamentos, repõe o stock e cancela as faturas)
+FIX_BY_FK_FACTURE = Corrigir fatura cancelada por ID
+FIX_BY_FK_FACTURE_DESC = Corrigir uma fatura específica que deveria estar cancelada através do ID da fatura (fk_facture)
+InterEntitySynchronizationTools = Sincronização de faturas inter-entidade
+ProductCatalogSynchronization = Sincronização do catálogo de produtos
+MasterDataSynchronization = Tabelas e dados operacionais
+FORCE_SYNC_SPECIFIC_DOCUMENT = Forçar sincronização de um documento específico
+FORCE_SYNC_SPECIFIC_DOCUMENT_DESC = Sincronizar um documento específico por data, tipo, série e número
+ForceSyncSpecificDocumentReplace = Substituir fatura sincronizada
+ForceSyncSpecificDocumentReplaceHelp = Apaga a fatura Dolibarr atualmente associada e recria o documento a partir do Zone Soft. Use apenas para corrigir uma sincronização incorreta.
+ForceSyncSpecificDocumentReplaceConfirm = Isto irá apagar a fatura Dolibarr atualmente ligada, remover o respetivo pagamento dedicado se existir e recriar o documento a partir do Zone Soft. Continuar?
+FORCE_SYNC_INVOICE_HEADERS_BY_DATE = Forçar sincronização de cabeçalhos de documentos por data
+FORCE_SYNC_INVOICE_HEADERS_BY_DATE_DESC = Sincronizar cabeçalhos de faturas dentro de um intervalo de datas
+SYNCH_ALL_ZS_INVOICES = Forçar sincronização de todas as faturas não sincronizadas
+SYNCH_ALL_ZS_INVOICES_DESC = Processar todas as sincronizações de faturas pendentes
+SYNCH_YESTERDAY_INVOICES = Sincronizar recibos de ontem
+SYNCH_YESTERDAY_INVOICES_DESC = Sincronizar automaticamente todos os cabeçalhos e recibos do dia anterior
+YesterdayInvoicesSyncSuccess = Recibos de ontem sincronizados com sucesso
+YesterdayInvoicesSyncFailed = Falha ao sincronizar recibos de ontem
+YesterdayInvoicesSyncException = Erro ao sincronizar recibos de ontem
+PleaseSelectBothDates = Por favor selecione ambas as datas (início e fim)
+FixCanceledInvoicesException = Erro ao corrigir faturas canceladas
+DictionarySync = Sincronização de Tabelas
+SyncProperties = Sincronizar propriedades
+SyncPropertiesDescription = Atualiza as definições de propriedades da ZoneSoft para a loja configurada na entidade ativa.
+PropertiesSyncSuccess = Definições de propriedades sincronizadas com sucesso
+PropertiesSyncFailed = Falha na sincronização das definições de propriedades
+PropertiesSyncException = Erro na sincronização das definições de propriedades
+SyncProducts = Sincronizar produtos
+SyncProductsDescription = Atualiza o catálogo local de produtos ZoneSoft em lotes limitados para a entidade ativa e loja configurada.
+SyncUnits = Sincronizar unidades
+SyncUnitsDescription = Atualiza as unidades usadas na configuração dos produtos e nos mapeamentos de unidades.
+SyncProdCenters = Sincronizar centros de produção
+SyncProdCentersDescription = Atualiza os centros de produção usados na configuração dos produtos.
+SyncCategories = Sincronizar categorias de produtos
+SyncCategoriesDescription = Atualiza as categorias usadas na configuração de produtos do KreaFlow.
+SyncGroups = Sincronizar grupos
+SyncGroupsDescription = Atualiza os grupos usados na configuração de produtos do KreaFlow.
+SyncMasterDataCore = Sincronizar dados operacionais
+SyncMasterDataCoreDescription = Atualiza métodos de pagamento, taxas, famílias, subfamílias, opções e características. Não sincroniza clientes nem fornecedores.
+MasterDataSyncSuccess = Dados operacionais sincronizados com sucesso
+MasterDataSyncPartial = A sincronização dos dados operacionais terminou com erros
+MasterDataSyncException = Falha na sincronização dos dados operacionais
+DocType = Tipo
+Serie = Série
+Number = Número
+to = até
+PleaseProvideAllDocumentFields = Por favor preencha todos os campos do documento (data, tipo, série, número)
+DocumentAlreadySynchronizedUseReplace = Este documento já está sincronizado. Ative a opção de substituição para o recriar.
+DocumentReplaceBusy = Outra sincronização já está a processar este documento. Tente novamente dentro de momentos.
+DocumentReplaceBlockedCanceled = Este documento já está cancelado no Dolibarr. Use antes as ferramentas de correção de cancelamento.
+DocumentReplaceBlockedCreditNote = A substituição foi bloqueada porque já existe uma nota de crédito ligada a esta fatura.
+DocumentReplaceBlockedSharedPayments = A substituição foi bloqueada porque um pagamento ligado também está alocado a outras faturas: %s
+DocumentReplaceBlockedDeleteDisabled = A configuração do Dolibarr neste ambiente não permite apagar faturas.
+DocumentReplaceBlockedAccountingExport = A fatura ligada já foi exportada para a contabilidade e não pode ser apagada em segurança.
+DocumentReplaceBlockedNumbering = A fatura ligada %s já não é o último número permitido na sequência atual, por isso o Dolibarr recusa o apagamento.
+DocumentReplaceBlockedSituationCycle = A fatura ligada não é a última no respetivo ciclo de situações, por isso o Dolibarr recusa o apagamento.
+DocumentReplaceBlockedResidualPayments = A fatura ligada ainda mantém montantes de pagamento associados depois da limpeza, por isso o Dolibarr recusa o apagamento.
+DocumentReplaceBlockedUnknownDelete = O Dolibarr recusou o apagamento da fatura ligada (estado de eliminação %s).
+DocumentReplaceDeleteExistingFailed = Não foi possível remover a fatura Dolibarr atualmente ligada antes da nova importação: %s
+DocumentReplaceSyncRowFailed = Não foi possível repor o registo de sincronização antes da nova importação.
+DocumentReplaceWrongEntity = A fatura ligada pertence a outra entidade e não pode ser substituída neste contexto.
+DocumentReplaceReloadFailed = Não foi possível recarregar a fatura depois de a voltar a rascunho.
+DocumentSyncSuccess = Documento sincronizado com sucesso
+DocumentSyncFailed = Falha ao sincronizar documento
+DocumentSyncException = Erro ao sincronizar documento
+InvalidDateFormat = Formato de data inválido. Use dd/mm/aaaa
+ProductsSyncException = Erro ao sincronizar produtos
+UnitsSyncSuccess = Unidades sincronizadas com sucesso
+UnitsSyncException = Erro ao sincronizar unidades
+ProdCentersSyncSuccess = Centros de produção sincronizados com sucesso
+ProdCentersSyncException = Erro ao sincronizar centros de produção
+CategoriesSyncSuccess = Categorias sincronizadas com sucesso
+CategoriesSyncException = Erro ao sincronizar categorias
+GroupsSyncSuccess = Grupos sincronizados com sucesso
+GroupsSyncException = Erro ao sincronizar grupos
+SyncToolsRedirect = Ferramentas de Sincronização
+SyncToolsRedirectMessage = Todas as ferramentas de sincronização foram movidas para uma página dedicada. Clique aqui para aceder
+InvoiceHeadersSyncSuccess = Cabeçalhos de faturas sincronizados com sucesso
+InvoiceHeadersSyncFailed = Falha ao sincronizar cabeçalhos de faturas
+InvoiceHeadersSynchronizationException = Erro ao sincronizar cabeçalhos de faturas
+headers = cabeçalhos
+
+#
+# Punch Clock Synchronization
+#
+PunchClockSync = Sincronização de Ponto
+SYNCH_PUNCHCLOCK_BETWEEN_DATES = Sincronizar cabeçalhos de ponto entre datas
+SYNCH_PUNCHCLOCK_BETWEEN_DATES_DESC = Buscar e armazenar entradas de ponto (apenas cabeçalhos) do ZSBMS entre as datas especificadas. Isto apenas importa os dados brutos sem emparelhar entradas IN/OUT.
+PunchClockHeadersSyncSuccess = Cabeçalhos de ponto sincronizados com sucesso
+PunchClockHeadersSyncFailed = Falha ao sincronizar cabeçalhos de ponto
+PunchClockHeadersSyncException = Erro ao sincronizar cabeçalhos de ponto
+PAIR_TIME_REGISTERS = Emparelhar registos de tempo e processar para tarefas
+PAIR_TIME_REGISTERS_DESC = Emparelhar entradas de ponto IN/OUT, integrá-las na tabela principal e criar entradas TimeSpent para tarefas. Processa automaticamente todas as entradas não emparelhadas. Esta é a mesma operação que o cron job "DZ Pair Time Registers".
+PairTimeRegistersSuccess = Registos de tempo emparelhados com sucesso
+PairTimeRegistersFailed = Falha ao emparelhar registos de tempo
+PairTimeRegistersException = Erro ao emparelhar registos de tempo
+STORE_ZS_PUNCHCLOCK = Armazenar dados de ponto ZS
+STORE_ZS_PUNCHCLOCK_DESC = Buscar entradas de ponto da API do ZoneSoft e armazená-las na base de dados. Esta é a mesma operação que o cron job "DZ Store Punch Clock Data".
+Process = Processar
+StoreZsPunchclockSuccess = Dados de ponto ZS armazenados com sucesso
+StoreZsPunchclockFailed = Falha ao armazenar dados de ponto ZS
+StoreZsPunchclockException = Erro ao armazenar dados de ponto ZS
+
+#
+# Inter-Entity Invoice Conversion
+#
+ZS_INTERENTITY_INVOICE_TITLE = Conversão de Faturas Inter-Entidades
+DOLIZSYNCH_INTERENTITY_INVOICE_ENABLED = Ativar Conversão de Faturas Inter-Entidades
+DOLIZSYNCH_INTERENTITY_INVOICE_ENABLED_HELP = Converter faturas de cliente da entidade atual (vendedora) em faturas de fornecedor nas entidades compradoras (requer módulo multicompany)
+DOLIZSYNCH_INTERENTITY_TARGET_ENTITIES = Entidades Alvo para Conversão de Faturas
+DOLIZSYNCH_INTERENTITY_TARGET_ENTITIES_HELP = Selecione as entidades que podem receber faturas de fornecedor. As faturas de cliente da entidade atual serão convertidas em faturas de fornecedor nas entidades selecionadas (com base no NIF do cliente).
+DOLIZSYNCH_INTERENTITY_LABEL_FALLBACK_ENABLED = Ativar Mapeamento de Produtos por Etiqueta
+DOLIZSYNCH_INTERENTITY_LABEL_FALLBACK_ENABLED_HELP = Quando ativado, se o mapeamento de produto não for encontrado nas tabelas de equivalência ou preços de fornecedor, o sistema tentará corresponder produtos pela etiqueta com substituição de sufixo
+DOLIZSYNCH_INTERENTITY_SELLER_SUFFIX = Sufixo da Etiqueta do Produto Vendedor
+DOLIZSYNCH_INTERENTITY_SELLER_SUFFIX_HELP = Sufixo usado nas etiquetas dos produtos da entidade vendedora (ex: 'RV). Este será substituído pelo sufixo do comprador ao pesquisar por etiqueta.
+DOLIZSYNCH_INTERENTITY_BUYER_SUFFIX = Sufixo da Etiqueta do Produto Comprador
+DOLIZSYNCH_INTERENTITY_BUYER_SUFFIX_HELP = Sufixo usado nas etiquetas dos produtos da entidade compradora (ex: 'CL). Este substituirá o sufixo do vendedor ao pesquisar por etiqueta.
+DOLIZSYNCH_ZSBMS_INVOICE_CREATOR_ENABLED = Ativar criador manual de faturas ZSBMS
+DOLIZSYNCH_ZSBMS_INVOICE_CREATOR_ENABLED_HELP = Mostra a página/menu "Criar Fatura ZSBMS" no menu de faturação.
+DOLIZSYNCH_EXCLUDED_ZSBMS_DOCUMENT_TYPES = Excluded ZSBMS Document Types
+DOLIZSYNCH_EXCLUDED_ZSBMS_DOCUMENT_TYPES_HELP = Comma-separated ZSBMS document types excluded from invoice import and Dolibarr-to-ZSBMS invoice export flows. Default: EC.
+
+#
+# Product Equivalence
+#
+ProductEquivalence = Equivalência de Produtos
+ProductEquivalenceMapping = Mapeamento de Equivalência de Produtos
+ProductEquivalenceInfo = Configure o mapeamento de produtos entre a entidade vendedora e as entidades compradoras. Cada produto na entidade vendedora pode ter um produto equivalente nas entidades compradoras.
+RequiresMulticompany = Esta funcionalidade requer o módulo Multicompany ativado
+SimpleOneToOneMapping = Mapeamento simples 1:1 (um produto de origem corresponde a um produto de destino)
+AddProductEquivalence = Adicionar Equivalência de Produto
+SourceProduct = Produto de Origem
+SourceRef = Referência de Origem
+DestinationProduct = Produto de Destino
+DestinationRef = Referência de Destino
+CurrentEntity = Entidade Atual
+OtherEntity = Outra Entidade
+ProductFromSellerEntity = Produto da entidade vendedora (cria faturas de cliente)
+ProductInBuyerEntity = Produto na entidade compradora (recebe faturas de fornecedor)
+NoProductEquivalence = Nenhuma equivalência de produto configurada
+ProductEquivalenceAlreadyExists = Esta equivalência de produto já existe
+ProductEquivalenceAdded = Equivalência de produto adicionada com sucesso
+ProductEquivalenceDeleted = Equivalência de produto eliminada com sucesso
+ConfirmDeleteProductEquivalence = Tem a certeza que pretende eliminar esta equivalência de produto?
+
+#
+# Inter-Entity Invoice Synchronization
+#
+SYNCH_INTERENTITY_INVOICES = Sincronizar Faturas Inter-Entidades
+SYNCH_INTERENTITY_INVOICES_DESC = Processar conversão de faturas de cliente da entidade vendedora para faturas de fornecedor nas entidades compradoras
+InterEntityInvoiceNotEnabled = A funcionalidade de conversão de faturas inter-entidades não está ativada
+InterEntityInvoicesSyncSuccess = Faturas inter-entidades sincronizadas com sucesso
+InterEntityInvoicesSyncFailed = Falha ao sincronizar faturas inter-entidades
+InterEntityInvoicesSyncException = Erro ao sincronizar faturas inter-entidades
+NoInterEntityInvoicesToProcess = Nenhuma fatura inter-entidades para processar
+CronJobTitleInterEntityInvoiceConversion = DZ Conversão Automática de Faturas Inter-Entidades
+CronJobCommentInterEntityInvoiceConversion = DZ Processa automaticamente faturas de cliente da entidade vendedora e converte para faturas de fornecedor nas entidades compradoras (a cada 60 minutos)
+CronJobTitleSyncHealthCheck = DZ Verificação de saúde da sincronização
+CronJobCommentSyncHealthCheck = Monitoriza a saúde da sincronização e envia notificações
+processed = processadas
+in = em
+AdvancedTools = Ferramentas Avançadas
+DocumentNotFoundInZoneSoft = Documento não encontrado no Zone Soft
+DocumentDateMismatch = Erro: Data do documento não corresponde (existe outro documento com o mesmo número noutra data)
+DocumentNotFoundAfterSave = Documento não encontrado na tabela de sincronização após guardar
+
+#
+# ShiftPlanner
+#
+ShiftPlannerMinuteStepHelp = Define o intervalo permitido no seletor de horas (divisores de 60, ex.: 5, 10, 15, 30). Valor padrão 30.
+DOLIZSYNCH_SHIFT_MAX_HOURS = Duração máxima do turno (horas)
+ShiftPlannerMaxShiftHoursHelp = Limita a duração total de cada turno. Utilize 0 para permitir qualquer duração (padrão: 8h).
+ShiftPlannerEmployeeGroupNotConfigured = -- Selecione um grupo --
+ShiftPlannerEmployeeGroupHelp = Grupo de utilizadores utilizado para definir quais os funcionários listados no planeador desta entidade.
+ShiftPlannerEmployeeGroupLabel = Grupos de utilizadores visiveis nos horarios
+ShiftPlannerManageEmployeesTitle = Selecionar Funcionários
+ShiftPlannerManageEmployeesHint = Marque os funcionários que devem aparecer no planeador desta entidade.
+ShiftPlannerManageEmployeesSearch = Pesquisar funcionários...
+ShiftPlannerManageEmployeesSave = Guardar seleção
+ShiftPlannerManageEmployeesCancel = Cancelar
+ShiftPlannerManageEmployeesEmpty = Nenhum funcionário encontrado.
+ShiftPlannerManageEmployeesLoading = A carregar funcionários...
+ShiftPlannerManageEmployeesNoGroup = Configure o grupo padrão em Configuração → KreaFlow antes de continuar.
+ShiftPlannerManageEmployeesApplySuccess = Lista de funcionários atualizada.
+ShiftPlannerEmployeeActiveTag = Ativo
+ShiftPlannerDayOffColorHelp = Cor usada nas células de folga (padrão: #bfbfbf)
+ShiftPlannerLeaveColorHelp = Cor usada nas células de ausência/férias (padrão: #cfcfcf)
+ShiftPlannerEmploymentColorHelp = Cor usada antes da data de admissão (padrão: #d9d9d9)
+ShiftPlannerMissedColorHelp = Cor usada em turnos marcados como falta (padrão: #f8d7da)
+DOLIZSYNCH_MISSED_COLOR = Cor de turno em falta
+DOLIZSYNCH_MISSED_FONT_COLOR = Cor da fonte do turno em falta
+ShiftPlannerDayOffLabel = Folga
+ShiftPlannerLeaveLabel = Férias
+ShiftPlannerEmployeeColumnLabel = Funcionário
+ShiftPlannerEmployeeSortLabel = ordenar
+ShiftPlannerEmployeeSortName = Nome
+ShiftPlannerEmployeeSortTask = Tarefa
+ShiftPlannerHolidayCountryHelp = País usado para destacar feriados públicos no planeador.
+ShiftPlannerMainTaskLabel = Tarefa
+ShiftPlannerMainTaskNone = Sem tarefa principal
+ShiftPlannerMainTaskPlaceholder = Selecionar tarefa
+ShiftPlannerMainTaskSaveError = Não tem permissão para atualizar estas definições.
+ShiftPlannerEmployeeHeaderTooltip = Clique para gerir funcionários ou ordenar a vista.
+ShiftPlannerEmployeeNameTooltip = Clique para editar horas e tarefa principal.
+ShiftPlannerEmployeeHoursTooltip = Clique para editar as horas previstas.
+ShiftPlannerEmployeeTaskTooltip = Clique para alterar a tarefa principal.
+ShiftPlannerEmployeeHeadingTooltip = Clique para abrir as opções do funcionário.
+ShiftPlannerEmployeeWeekNoteColumnLabel = Notas
+ShiftPlannerEmployeeWeekNotePlaceholder = Nota.
+ShiftPlannerEmployeeWeekNoteSave = Guardar
+ShiftPlannerEmployeeWeekNoteSaveError = Falha ao guardar a nota do funcionário.
+ShiftPlannerEmployeeInactiveTag = Inativo
+ShiftPlannerEmployeeStatusToggleError = Falha ao atualizar o estado do funcionário.
+ShiftPlannerEmployeeStatusToggleSuccess = Estado do funcionário atualizado.
+ShiftPlannerMaxShiftHoursExceeded = O turno não pode ultrapassar %s horas.
+ShiftPlannerWeekPickerThisWeek = Hoje
+DOLIZSYNCH_SHIFT_USE_EXTRAFIELD_HOURS = Usar horas efectivas
+ShiftPlannerUseExtrafieldHoursHelp = Define de onde o planeador lê/grava as horas semanais contratadas (usadas nos totais e na edição). Ativo: usa llx_user_extrafields.horasefect. Inativo: usa llx_user.weeklyhours (predefinição).
+ShiftPlannerHoursSourceExtrafield = horasefect (campo extra do utilizador)
+ShiftPlannerHoursSourceWeeklyHours = weeklyhours (tabela de utilizadores)
+ShiftPlannerQuotaHint = Defina o total de horas semanais previstas para o funcionário selecionado (origem: %s).
+ShiftPlannerFutureEmploymentLabel = Admissão
+ShiftPlannerDayBeforeHireLabel = Inicio contrato →
+ShiftPlannerAfterEmploymentLabel = Fim de contrato
+ShiftPlannerDayAfterEndLabel = ← Fim contrato
+ShiftPlannerOptionShift = Turno
+ShiftPlannerOptionDayOff = Folga
+ShiftPlannerOptionLeave = Ausência
+ShiftPlannerOptionMissed = Falta
+ShiftPlannerShiftStatusLabel = Estado do turno
+ShiftPlannerShiftStatusScheduled = Planeado
+ShiftPlannerShiftStatusMissed = Falta
+ShiftPlannerShiftStatusMissedUnjustified = Falta injustificada
+ShiftPlannerShiftStatusMissedJustified = Falta justificada
+ShiftPlannerMissedBadgeLabel = F
+ShiftPlannerMissedAbsenceTypeMissing = O tipo de ausência para %s não está configurado. Crie/ative-o primeiro nos tipos de ausência.
+ShiftPlannerConfirmMissedAbsenceConversion = Converter este turno para %s? O turno será substituído por uma ausência.
+ShiftPlannerReconvertToShift = Reconverter para turno
+ShiftPlannerReconvertToShiftTooltip = Converter ausência em turno planeado
+ShiftPlannerConfirmReconvertToShift = Reconverter esta %s para turno? A ausência será substituída por um turno.
+ShiftPlannerReconvertToShiftError = Falha ao reconverter ausência para turno.
+ShiftPlannerShiftDescriptionLabel = Descrição
+ShiftPlannerDescriptionBadgeLabel = Descrição
+ShiftPlannerLeaveHoursOption = Período horário (hh:mm a hh:mm)
+ShiftPlannerLeaveHoursStart = Hora inicial
+ShiftPlannerLeaveHoursEnd = Hora final
+ShiftPlannerLeaveHoursRequired = Indique o intervalo de horas da ausência.
+ShiftPlannerLeaveHoursSameDay = A ausência por horas deve ocorrer no mesmo dia.
+ShiftPlannerLeaveMinutesOption = Tempo (minutos)
+ShiftPlannerLeaveMinutesLabel = Tempo (minutos)
+ShiftPlannerLeaveMinutesRequired = Indique o total de minutos da ausência.
+ShiftPlannerLeaveMinutesUnit = min
+ShiftPlannerLeaveMinutesSummary = Faltou %s
+ShiftPlannerLeaveLegendTitle = Legenda de ausências
+ShiftPlannerLeaveHalfMorningLabel = Manhã
+ShiftPlannerLeaveHalfAfternoonLabel = Tarde
+ShiftPlannerEmployeeOnDayOff = Funcionário está em folga.
+ShiftPlannerEmployeeOnLeave = Funcionário está em ausência: %s
+ShiftPlannerEmployeeBeforeHire = Funcionário ainda não iniciou nesta data.
+ShiftPlannerEmployeeAfterEnd = Funcionário já não está ativo nesta data.
+ShiftPlannerConfirmRemoveDayOff = Pretende remover esta folga?
+ShiftPlannerConfirmRemoveLeave = Pretende remover esta ausência?
+ShiftPlannerCopyRowHeader = Copiar
+ShiftPlannerCopyRowNextWeek = Copiar para próxima semana
+ShiftPlannerCopyRowConfirm = Copiar a semana de {employee} ({source}) para {target}?
+ShiftPlannerCopyBlocked = Alguns turnos não foram copiados devido a folga ou ausência no dia seguinte.
+ShiftPlannerSelectDayOffDate = Selecione a data da folga.
+ShiftPlannerSelectLeaveType = Selecione o tipo de ausência.
+ShiftPlannerFillLeaveDates = Preencha as datas de início e fim.
+ShiftPlannerInvalidLeaveRange = A data final deve ser posterior ou igual à data inicial.
+ShiftPlannerErrorCreateDayOff = Erro ao registar folga
+ShiftPlannerErrorDeleteDayOff = Erro ao remover folga
+ShiftPlannerErrorCreateLeave = Erro ao criar ausência
+ShiftPlannerErrorDeleteLeave = Erro ao remover ausência
+ShiftPlannerWrongEntity = Este registo pertence a outra entidade.
+ShiftPlannerLeaveHoursOption = Período horário (hh:mm a hh:mm)
+ShiftPlannerLeaveMinutesOption = Tempo (minutos)
+ShiftPlannerCannotMoveDayOff = Não é possível mover o turno para um dia com folga.
+ShiftPlannerCannotMoveLeave = Não é possível mover o turno para um dia com ausência.
+ShiftPlannerNotePrefix = Nota:
+ShiftPlannerRecurringHint = Recorrente semanalmente
+ShiftPlannerLeavetitle = Licença
+# Report headers
+PublicHoliday=Feriado
+PublicHolidayWorked=Feriado (d)
+PublicHolidayWorkedHours=Feriado (h)
+Scheduled=Horario
+Worked=Ponto
+LeaveColumnsMapping=Mapeamento de Colunas de Férias
+PublicHolidayCountry=País para Feriados
+Horasefect=HE
+WeeklyHours=HC
+ManualColumnsMapping=Mapeamento de Colunas Manuais
+Configure leave columns per entity.=Configurar colunas de ausências por entidade.
+Format: Label|gray|u=UNIT:EXPR;Label2:EXPR2. Codes come from c_holiday_types.code. Supports +, -, *, /, parentheses, numeric factors, and variables HE/HC. Empty expression = sum of all codes. Use '|gray' to shade; '|u=h' to set unit label. Example: 'Vacations|gray:VAC+FERIAS;Sickness:BAIXA+BAIXA_SEG;Total:BAIXA+BAIXA_SEG-ABS'.=Formato: Rótulo|gray|u=UNIDADE:EXPR;Rótulo2:EXPR2. Os códigos vêm de c_holiday_types.code. Suporta +, -, *, /, parênteses, fatores numéricos e variáveis HE/HC. Expressão vazia = soma de todos os códigos. Use '|gray' para sombrear; '|u=h' para definir a unidade. Exemplo: 'Férias|gray:VAC+FERIAS;Baixa:BAIXA+BAIXA_SEG;Total:BAIXA+BAIXA_SEG-ABS'.
+Configure manual columns per entity.=Configurar colunas manuais por entidade.
+Format: Label|gray|u=UNIT:DefaultValue;Label2:Default2. Use |gray to shade; |u=h to set unit label (default d); default fills the input. Values are editable per employee/month and stored with the report notes. Example: 'Total M|gray|u=h:0;Total M2|u=d:'.=Formato: Rótulo|gray|u=UNIDADE:ValorDefault;Rótulo2:ValorDefault2. Use |gray para sombrear; |u=h para indicar a unidade (padrão d); o valor preenche o campo. Os valores são editáveis por funcionário/mês e guardados com as notas do relatório. Exemplo: 'Total M|gray|u=h:0;Total M2|u=d:'.
+
+ManualColumnsStorageMissing=Para usar colunas manuais, adicione o campo 'manual_json' em llx_dolizsynch_month_notes (veja o ficheiro SQL do módulo) e volte a tentar.
+
+LeaveColumnsHelpExtended=Formato: Label|gray|u=UNIDADE|manual|key=CHAVE|w=LARGURA:EXPRESSAO<br>• Códigos vêm de c_holiday_types.code. Suporta +, -, *, /, parênteses, números e variáveis HE/HC.<br>• |manual cria um campo editável; o valor após ':' é o valor inicial; |key define o nome guardado; |w=120 ou |w=120px define a largura do input; |u= define o rótulo da unidade; |gray sombreia a coluna.<br>• Expressão vazia = soma de todos os códigos. Guardado em manual_json/notas por funcionário e mês.<br>Exemplo: Férias:FERIAS; Total H|gray|u=h:(BAIXA_SS+BAIXA_SEG)*HC/5; Total M|manual|gray|u=h|key=total_m|w=120:0
+
+TrainingHours=Horas Formação
+
+# Visibilidade dos crachás de turno
+DOLIZSYNCH_SHIFT_BADGE_TITLE=Exibir crachás do tipo de turno
+DOLIZSYNCH_SHIFT_SHOW_BADGE_NORMAL=Mostrar crachá de turno normal (N)
+DOLIZSYNCH_SHIFT_SHOW_BADGE_SPECIAL=Mostrar crachá de turno especial (E)
+DOLIZSYNCH_SHIFT_NOTES_TITLE = Notas do planeador semanal
+DOLIZSYNCH_SHIFT_EMPLOYEE_WEEK_NOTES_ENABLED = Ativar notas semanais por funcionário
+DOLIZSYNCH_SHIFT_EMPLOYEE_WEEK_NOTES_ENABLED_HELP = Mostra ou oculta a coluna de notas semanais por funcionário na vista por funcionários. Ativo por defeito.
+leaveHoursOption=Período horário (hh:mm a hh:mm)
+leaveMinutesOption=Tempo (minutos)
+
+# UI labels
+BulkEdit=Edição em massa
+Remaining=Restante
+
+# Schedule audit log
+ScheduleAuditLog=Log de alteracoes de horarios
+DOLIZSYNCH_SOURCE_LABEL=Origem ZS
+DOLIZSYNCH_DIRECTION_LABEL=Sentido
+
+#
+# Atualizações de preços agendadas
+#
+CronJobTitleScheduledPriceUpdates = DZ Processar preços agendados
+CronJobCommentScheduledPriceUpdates = Aplicar preços de produtos vencidos e sincronizar no ZSBMS
+PriceScheduleMenu = Preços Agendados
+PriceScheduleTitle = Atualizações de preços agendadas
+PriceScheduleHelp = Agende preços com data/hora de entrada em vigor. Um cron aplica automaticamente e sincroniza com o ZSBMS.
+PriceScheduleAddBatchTitle = Adicionar lote de preços
+PriceScheduleEffectiveAt = Vigorar em
+PriceSchedulePriceLevel = Nível de preço
+PriceSchedulePriceBaseType = Base de preço
+PriceScheduleLines = Lista de produtos
+PriceScheduleLinesPlaceholder = REF_PRODUTO;12.50\nREF_PRODUTO_2;9.99
+PriceScheduleLinesHelp = Um produto por linha. Separadores suportados: ponto e vírgula, tabulação ou vírgula.
+PriceScheduleQueueButton = Agendar atualizações
+PriceScheduleQueuedRows = Linhas agendadas
+PriceScheduleStatusPending = Pendente
+PriceScheduleStatusDone = Concluído
+PriceScheduleStatusError = Erro
+PriceScheduleStatusCanceled = Cancelado
+PriceScheduleErrorMissingDate = A data/hora de vigência é obrigatória.
+PriceScheduleErrorMissingLines = A lista de produtos é obrigatória.
+PriceScheduleErrorInvalidDate = Data/hora de vigência inválida.
+PriceScheduleRowsQueued = %s atualização(ões) de preço agendada(s) para %s.
+PriceScheduleLineInvalidFormat = Linha %s com formato inválido. Use REF_PRODUTO;PRECO
+PriceScheduleLineInvalidPrice = Linha %s com preço inválido para o produto %s.
+PriceScheduleLineProductNotFound = Linha %s: produto %s não encontrado.
+PriceScheduleLineInsertFailed = Linha %s: falha ao agendar o produto %s.
+PriceScheduleRowCanceled = Linha agendada cancelada.
+PriceScheduleRowCancelFailed = Falha ao cancelar a linha agendada.
+PriceScheduleRowRetried = Linha agendada movida para pendente.
+PriceScheduleRowRetryFailed = Falha ao reprocessar a linha agendada.
+PriceScheduleGridHelp = Adicione ou remova linhas, defina os precos por nivel e a data/hora de aplicacao automatica.
+PriceScheduleBasePrice = Base de preco
+PriceScheduleEvents = Eventos
+PriceScheduleDateProcessed = DataProcessada
+PriceScheduleError = Erro
+PriceScheduleStatusMixed = Misto
+PriceScheduleInvalidSelection = Selecao invalida.
+PriceScheduleRowsCanceled = Linhas pendentes canceladas.
+PriceScheduleRowsRetried = Linhas com erro movidas para pendente.
+PriceScheduleRowsQueuedSimple = %s linha(s) de preco agendada(s).
+PriceScheduleLineMissingRef = Linha %s: a referencia do produto e obrigatoria.
+PriceScheduleLineMissingDate = Linha %s: a data/hora de agendamento e obrigatoria.
+PriceScheduleLineNoPrices = Linha %s: preencha pelo menos um nivel de preco.
+PriceScheduleAddLine = Adicionar linha
+PriceScheduleSaveLines = Agendar linhas
+PriceScheduleEndAt = Vigorar ate
+PriceScheduleRecurrence = Recorrencia
+PriceScheduleRecurrenceOnce = Uma vez
+PriceScheduleRecurrenceDaily = Diaria
+PriceScheduleRecurrenceWeekly = Semanal
+PriceScheduleRecurrenceMonthly = Mensal
+PriceScheduleRecurrenceYearly = Anual
+PriceSchedulePromoPrice = Preco promocional
+PriceScheduleWindow = Janela
+PriceScheduleRulesTitle = Regras promocionais agendadas
+PriceScheduleRuleStatusEnabled = Ativa (a aguardar janela)
+PriceScheduleRuleStatusActive = Promocao em vigor
+PriceScheduleRulesQueuedSimple = %s regra(s) de promocao agendada(s).
+PriceScheduleLineEndMustBeAfterStart = Linha %s: a data/hora final deve ser superior a inicial.
+PriceScheduleLineEndRequiredForWeekly = Linha %s: a recorrencia semanal exige data/hora final.
+PriceScheduleLineEndRequiredForRecurrence = Linha %s: a recorrencia exige data/hora final.
+PriceScheduleRuleTableUnavailable = Nao foi possivel preparar a tabela de regras de promocao.
+PriceScheduleRulesDisabled = Regras promocionais desativadas.
+PriceScheduleRulesEnabled = Regras promocionais ativadas.
+PriceScheduleRuleDisableFailed = Falha ao desativar regra promocional.
+PriceScheduleRuleEnableFailed = Falha ao ativar regra promocional.
+PriceScheduleRuleLoadedForEdit = Regra promocional #%s carregada para edicao.
+PriceScheduleRuleNotFound = Regra promocional nao encontrada.
+PriceScheduleRuleDeleted = Regra promocional eliminada.
+PriceScheduleRuleDeleteFailed = Falha ao eliminar regra promocional.
+PriceScheduleRuleActiveEditBlocked = Nao pode editar uma promocao ativa. Desative-a primeiro.
+PriceScheduleRuleEditSinglePriceLevel = Linha %s: ao editar promocao preencha apenas um nivel de preco.
+PriceScheduleRuleEditNeedsPromotion = Linha %s: para editar promocao mantenha recorrencia ou data final.
+PriceScheduleRuleEditFailed = Falha ao atualizar regra promocional.
+#
+# Categorias visiveis (menu produtos)
+#
+DoliZSynchVisibleCategoriesMenu = Produtos em vendas
+DoliZSynchVisibleCategoriesTitle = Produtos em vendas
+DoliZSynchVisibleCategoriesHelp = Lista os produtos agrupados pelas familias ZSBMS selecionadas nas tabelas de visibilidade do KreaFlow (zsfamily/zsproduct).
+DoliZSynchVisibleCategoriesShowEmpty = Mostrar familias sem produtos
+DoliZSynchVisibleCategoriesFilterListName = Filtrar listas por nome
+DoliZSynchVisibleCategoriesFilterPlaceholder = Escreva o nome da familia ou subfamilia
+DoliZSynchVisibleCategoriesTablesMissing = As tabelas de visibilidade de familias/produtos do KreaFlow nao foram encontradas.
+DoliZSynchVisibleCategoriesColumnCategory = Familia ZS
+DoliZSynchVisibleCategoriesColumnSubcategory = Subfamilia ZS
+DoliZSynchMappedDolibarrCategory = Categoria Dolibarr
+DoliZSynchProductCount = Produtos
+DoliZSynchStoreZs = Loja ZS
+DoliZSynchProductProperties = Propriedades do produto
+DoliZSynchProperty = Propriedade
+DoliZSynchPropertyDataType = Tipo de dados
+DoliZSynchPropertySalePriority = Prioridade na venda
+DoliZSynchPropertyMultipleValues = Múltiplos valores
+DoliZSynchPropertyPurchase = Na compra
+DoliZSynchPropertySale = Na venda
+DoliZSynchPropertyConfirm = Confirmar
+DoliZSynchPropertyStatus = Estado
+DoliZSynchPropertyActions = Ações
+DoliZSynchPropertyActive = Ativo
+DoliZSynchPropertyInactive = Inativo
+DoliZSynchPropertyRemove = Remover
+DoliZSynchPropertyYes = Sim
+DoliZSynchPropertyNo = Não
+DoliZSynchPropertyNotApplicable = Não se aplica
+DoliZSynchPropertyOptional = Opcional
+DoliZSynchPropertyMandatory = Obrigatório
+DoliZSynchPropertyDataTypeString = Texto
+DoliZSynchPropertyDataTypeDate = Data
+DoliZSynchPropertyDataTypeDateTime = Data e hora
+DoliZSynchPropertyDataTypeNumeric = Número
+DoliZSynchPropertyOrderNone = Não se aplica
+DoliZSynchPropertyOrderFifo = Primeiro a entrar, primeiro a sair
+DoliZSynchPropertyOrderLifo = Último a entrar, primeiro a sair
+DoliZSynchProductPropertiesNone = Nenhuma propriedade atribuída.
+DoliZSynchProductPropertiesNoAvailable = Nenhuma propriedade ativa disponível
+DoliZSynchProductPropertiesLoadFailed = Não foi possível obter a lista de propriedades do ZSBMS
+DoliZSynchProductPropertiesStoreRequired = Configure uma loja ZSBMS para a entidade ativa antes de gerir propriedades do produto.
+DoliZSynchProductPropertiesCharacteristicsConflict = O ZSBMS não permite que um produto tenha propriedades e características em simultâneo. Remova as características antes de atribuir propriedades.
+DoliZSynchPropertyStockRule = Stock exato por propriedade
+DoliZSynchPropertyStockTriggerProperty = Propriedade da fatura de origem com número de embalagens
+DoliZSynchPropertyStockBom = BOM de desmontagem de destino
+DoliZSynchPropertyStockNoBom = Sem conversão para stock exato
+DoliZSynchPropertyStockNoValidatedBom = Este produto de compra não tem uma BOM de desmontagem validada com exatamente uma saída de stock positiva e visível na entidade. Corrija e valide uma das BOM apresentadas antes de configurar a conversão para stock exato.
+DoliZSynchPropertyStockHelp = Mantém a quantidade da fatura de fornecedor na unidade de compra e substitui a saída calculada da BOM selecionada pelo número de embalagens da origem multiplicado pela quantidade de saída da BOM. A quantidade de saída da BOM é o número de unidades de destino por embalagem.
+DoliZSynchPropertyStockDisabled = Não está configurada nenhuma BOM de desmontagem de destino.
+DoliZSynchPropertyStockSourcePropertyRequired = Selecione uma propriedade válida da fatura de origem para a regra de stock.
+DoliZSynchPropertyStockNumericPropertyRequired = A regra de stock requer uma propriedade numérica.
+DoliZSynchPropertyStockMigrationRequired = Ative o módulo atualizado para instalar o esquema de stock por propriedade antes de configurar esta regra.
+DOLIZSYNCH_PROPERTY_STOCK_SOURCE_PROPERTY_ID = Propriedade com número de embalagens
+DOLIZSYNCH_PROPERTY_STOCK_SOURCE_PROPERTY_ID_HELP = Selecione a propriedade numérica ativa do ZSBMS que contém o número de embalagens nas linhas da fatura de origem. O formulário de stock exato só fica disponível enquanto esta propriedade estiver configurada e válida para a entidade ativa.
+DoliZSynchPropertyStockSetupNotConfigured = Não configurada
+DoliZSynchPropertyStockSetupUnavailable = A propriedade configurada #%s não está disponível ou não é uma propriedade numérica ativa
+DoliZSynchPropertyStockConfiguration = Conversão para stock em unidades
+DoliZSynchPropertyStockConfigurationDesc = Selecione a BOM de desmontagem de destino. O seu único produto de saída recebe o número de embalagens da origem multiplicado pela quantidade de saída da BOM.
+DoliZSynchPropertyStockActiveState = Ativa
+DoliZSynchPropertyStockConfiguredInSetup = Propriedade de origem definida na configuração do KreaFlow
+DoliZSynchPropertyStockBomWarningTitle = Conversão do KreaFlow para stock exato
+DoliZSynchPropertyStockBomWarning = Esta desmontagem não utiliza o peso da fatura de fornecedor como quantidade final de saída. O KreaFlow calcula as unidades finais através do valor de "%s" multiplicado pela quantidade de saída desta BOM. Defina na linha de saída o número de unidades de destino produzidas por uma embalagem. Definição atual: %s × %s por embalagem.
+DoliZSynchPropertyStockBomCandidateWarning = Se esta BOM for selecionada para a conversão de stock exato, a desmontagem não utilizará o peso da fatura de fornecedor como quantidade final de saída. O KreaFlow calculará as unidades finais através do valor de %s multiplicado pela quantidade de saída desta BOM. Defina na linha de saída o número de unidades de destino produzidas por uma embalagem. Definição atual: %s × %s por embalagem.
+DoliZSynchPropertyStockConfiguredPackageProperty = a propriedade configurada de número de embalagens da origem
+DoliZSynchPropertyStockSharedBomRule = Configuração de BOM partilhada; visível em todas as entidades com a propriedade "%s" configurada
+DoliZSynchPropertyStockBomPackageQuantity = Quant. (%s)
+DoliZSynchPropertyStockBomPackageQuantityHelp = Esta receita de stock exato representa uma embalagem de origem. As unidades finais são calculadas através do valor de "%s" multiplicado pela quantidade do produto de saída desta BOM. Definição atual: %s × %s por embalagem.
+DoliZSynchPropertyStockBomWeightQuantity = Quant. (peso)
+DoliZSynchPropertyStockBomWeightQuantityHelp = Peso nominal de compra representado por uma embalagem nesta BOM. O peso real da fatura de fornecedor continua a ser a referência para a valorização final.
+DoliZSynchPropertyStockBomNominalUnitResult = %s unidades de destino = %s por unidade
+DoliZSynchPropertyStockBomNominalEstimate = Estimativa nominal da BOM: %s × %s = %s por embalagem; %s. O custo unitário real só é aplicado após uma conversão auditada de fatura de fornecedor e utiliza o peso real faturado.
+DoliZSynchPropertyStockBomReasonNotValidated = A BOM não está validada
+DoliZSynchPropertyStockBomReasonNoOutput = A BOM não tem uma linha de saída
+DoliZSynchPropertyStockBomReasonMultipleOutputs = A BOM tem %s linhas de saída; é necessária exatamente uma
+DoliZSynchPropertyStockBomReasonInvalidOutput = A saída tem de ser um produto com stock
+DoliZSynchPropertyStockBomReasonSameProduct = O produto de saída não pode ser o próprio produto de compra
+DoliZSynchPropertyStockBomReasonInvisibleOutput = O produto de saída não está visível na entidade ativa
+DoliZSynchPropertyStockBomReasonInvalidQuantity = A quantidade de saída não é um número válido
+DoliZSynchPropertyStockBomReasonNonPositiveQuantity = A quantidade de saída %s tem de ser positiva
+DoliZSynchPropertyStockAuditTitle = Auditoria de stock exato
+DoliZSynchPropertyStockAuditPending = Pendente
+DoliZSynchPropertyStockAuditApplied = Aplicada
+DoliZSynchPropertyStockAuditReview = Revisão manual
+DoliZSynchPropertyStockAuditFormula = %s embalagens × %s unidades por embalagem = %s unidades de destino
+DoliZSynchPropertyStockAuditPlan = Plano
+DoliZSynchPropertyStockAuditSourceMovement = Movimento da propriedade de origem
+DoliZSynchPropertyStockAuditCorrectionMovements = Movimentos de correção: remoção #%s, entrada #%s
+DoliZSynchPropertyStockAuditValuation = Valorização da compra: %s × %s = %s; custo unitário exato: %s
+DoliZSynchPropertyStockAuditLineTotal = Total sem IVA da linha da fatura de fornecedor: %s
+DOLIZSYNCH_PRODUCT_PRICE_SYNC_TITLE = Sincronização automática de preços no ZSBMS
+DOLIZSYNCH_PRODUCT_PRICE_SYNC_ENABLED = Ativar sincronização agendada dos preços de venda e de custo
+DOLIZSYNCH_PRODUCT_PRICE_SYNC_ENABLED_HELP = Atualiza apenas os níveis de preços de venda e o preço de custo do Dolibarr na loja ZSBMS configurada para a entidade atual. Os produtos têm de estar ativos para venda, ativos no KreaFlow, disponíveis para venda nessa loja e configurados como Venda ou Venda + Mercadoria.
+DOLIZSYNCH_PRODUCT_PRICE_SYNC_START_TIME = Hora de início
+DOLIZSYNCH_PRODUCT_PRICE_SYNC_START_TIME_HELP = Hora da primeira execução no fuso horário do servidor Dolibarr. O valor predefinido é 04:00.
+DOLIZSYNCH_PRODUCT_PRICE_SYNC_REPEAT_INTERVAL = Intervalo de repetição
+DOLIZSYNCH_PRODUCT_PRICE_SYNC_REPEAT_INTERVAL_HELP = Utilize HH:MM. Defina 00:00 para executar uma vez por dia à hora de início; um valor positivo repete a partir dessa hora.
+CronJobTitleProductPriceSynchronization = DZ Sincronizar preços de venda e de custo no ZSBMS
+CronJobCommentProductPriceSynchronization = Sincroniza apenas os níveis de preços de venda e o preço de custo do Dolibarr para os produtos elegíveis na loja ZSBMS configurada para a entidade ativa.
+CronJobTitleProductPriceSynchronizationRecovery = DZ Retomar sincronização de preços ZSBMS interrompida
+CronJobCommentProductPriceSynchronizationRecovery = Retoma uma fila de preços de venda e de custo ZSBMS interrompida na entidade após expirar o bloqueio do processo.
+DoliZSynchProductPriceSyncSetupError = Não foi possível configurar a sincronização automática de preços ZSBMS: %s
+
+DZSStorePricesEnable=Preços diferentes por loja ZSBMS
+DZSStorePricesUnavailable=Preços por loja indisponíveis; atualização do módulo necessária
+DZSStorePricesHelp=Os campos vazios utilizam o preço normal do produto. Edite HT ou TTC; o último valor editado define a base do preço. Utilize -1 para preço variável. Desativar a opção mantém os valores guardados.
+DZSStore=Loja
+DZSPriceBasis=Base do preço
+DZSNoActiveStores=Este produto não tem lojas ZSBMS ativas.
+DZSStorePricesSave=Guardar e sincronizar preços por loja
+DZSStorePricesSyncFailed=Preços guardados localmente, mas a sincronização falhou na loja %s. Guarde novamente para tentar outra vez.
+DZSStorePricesNextSync=Configuração guardada. Os preços serão aplicados na próxima sincronização ZSBMS ativa.
+DoliZSynchConsumoMinimo=Excluir do consumo mínimo (ZS)
+DoliZSynchEmentaDigital=Menu Digital (ZS)
+
+DZSPriceTTC=Preço Venda CIVA
+DZSPriceHT=Preço Venda SIVA
+DZSCostHT=Preço Compra SIVA
+DZSMargin=Margem
+DZSMinimumHT=Preço Min. SIVA
+DZSInheritedPrice=Preço normal do produto
+DZSVariablePrice=Variável
+
+KreaFlowMobileSettings = Aplicação móvel
+
+VacationMapInvalidRecords = %s registo(s) de ausência inválido(s) excluído(s). Reveja a origem antes de utilizar os totais.
+VacationMapEmployee = Funcionário
+VacationMapEmployeeNumber = N.º

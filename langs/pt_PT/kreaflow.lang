@@ -1,0 +1,61 @@
+# Translation file
+
+#
+# Generic
+#
+
+# Module label 'ModuleKreaFlowName'
+ModuleKreaFlowName = KreaFlow
+# Module description 'ModuleKreaFlowDesc'
+ModuleKreaFlowDesc = KreaFlow: integração, sincronização, gestão de equipas e painéis móveis
+
+#
+# Admin page
+#
+KreaFlowSetup = Configuração KreaFlow
+Settings = Definições
+KreaFlowSetupPage = Página de configuração KreaFlow
+KreaFlowProductLayoutSetup = Layout de categorias de produto
+KREAFLOW_PRODUCTLIST_CATEGORIES = Categorias mostradas na página de produtos
+KREAFLOW_PRODUCTLIST_CATEGORIESTooltip = Selecione as categorias de produto que devem aparecer na página móvel de produtos.
+KREAFLOW_PRODUCTLIST_FILTER_TOSELL = Apenas para venda
+KREAFLOW_PRODUCTLIST_FILTER_TOSELLTooltip = Restringir produtos aos que estão marcados para venda (p.tosell = 1).
+KREAFLOW_HISTORY_LIMIT_DAYS = Limite de histórico (dias)
+KREAFLOW_HISTORY_LIMIT_DAYSTooltip = Utilizadores sem a permissão "Read data older than configured history limit" só podem aceder a dados com data dentro deste limite.
+KREAFLOW_STOCK_FORECAST_ENTITIES = Entidades da previsão de stock
+KREAFLOW_STOCK_FORECAST_ENTITIESTooltip = Selecione as entidades onde o separador e a API Previsão de Stock — Patties ficam disponíveis. Nenhuma entidade fica disponível até ser selecionada explicitamente.
+KREAFLOW_FECHO_EDIT_LIMIT_DAYS = Limite de antiguidade para edição de fecho (dias)
+KREAFLOW_FECHO_EDIT_LIMIT_DAYSTooltip = Utilizadores sem a permissão "Edit Fecho Financeiro records older than configured edit limit" só podem editar fechos dentro deste limite.
+KreaFlowProductLayoutNoCategoryConfigured = Ainda não existem categorias configuradas. Configure pelo menos uma categoria para mostrar secções de produtos.
+KreaFlowProductLayoutConfiguredIds = IDs de categorias configuradas
+NewSection=Nova secção
+KREAFLOW_MYPARAM1 = Parâmetro 1
+KREAFLOW_MYPARAM1Tooltip = Dica do parâmetro 1
+KREAFLOW_MYPARAM2=Parâmetro 2
+KREAFLOW_MYPARAM2Tooltip=Dica do parâmetro 2
+
+
+#
+# About page
+#
+About = Sobre
+KreaFlowAbout = Sobre o KreaFlow
+KreaFlowAboutPage = Página sobre o KreaFlow
+
+#
+# Sample page
+#
+KreaFlowArea = Área KreaFlow
+KreaFlowMobileApp = App Móvel
+KreaFlowFrontendBuildMissing = Build do frontend em falta. Compile a app React e publique em custom/kreaflow/frontend.
+MyPageName = Nome da minha página
+
+#
+# Sample widget
+#
+MyWidget = O meu widget
+MyWidgetDescription = Descrição do meu widget
+
+KitchenSettings=Configuração da cozinha
+KitchenStations=Postos visíveis na cozinha
+KitchenStationsHelp=Selecione os postos da empresa ativa. Todos os postos selecionados são apresentados em conjunto no painel, sem filtro por posto. O dia de trabalho segue a hora de mudança de dia configurada no DoliZSynch para a empresa ativa, no fuso horário Europe/Lisbon. Por predefinição, são apresentados os pedidos em preparação.

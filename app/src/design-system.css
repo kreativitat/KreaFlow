@@ -1,0 +1,127 @@
+/* Copyright (C) 2026 Kreativität Works <mail@kreativitat.com>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License,
+ * or (at your option) any later version.
+ */
+/* Shared presentation for every KreaFlow app route. */
+.kf-app body { background: var(--kf-background); font-family: var(--kf-font); }
+.kf-app .ambient { display: none; }
+.kf-app .app-shell { max-width: 1800px; padding: 16px; }
+.kf-app .card, .kf-app .eats-card, .kf-app .eats-kpis article, .kf-app .kitchen-card, .kf-app .kitchen-kpis article {
+  background: var(--kf-surface); border: 1px solid var(--kf-border); border-radius: var(--kf-radius-lg);
+  box-shadow: var(--kf-shadow); padding: var(--kf-space-3); backdrop-filter: none;
+}
+.kf-app .dashboard-space, .kf-app .kpi-grid, .kf-app .chart-grid { gap: var(--kf-space-2); }
+.kf-app .kf-icon { flex: 0 0 auto; }
+.kf-app .topbar { min-height: 56px; margin: -16px -16px 24px; padding: 8px 24px; background: var(--kf-surface); border-bottom: 1px solid var(--kf-border); }
+.kf-app .topbar-left { gap: 16px; }
+.kf-app .kicker { font-size: 18px; font-weight: 700; text-transform: none; letter-spacing: normal; color: var(--kf-text); }
+.kf-app .menu-toggle { border-color: transparent; background: transparent; width: 40px; height: 40px; }
+.kf-app .entity-bullet { color: var(--kf-text-secondary); background: var(--kf-surface-muted); border: 1px solid var(--kf-border); font-size: 11px; height: 30px; max-width: 90px; opacity: 1; padding: 0 10px; }
+.kf-app .topbar-install { min-height: 32px; font-size: 12px; background: var(--kf-brand-soft); border-color: var(--kf-brand-border); color: var(--kf-brand-ink); }
+.kf-app :is(button, a, input, select, textarea, summary):focus-visible { outline: 3px solid var(--kf-primary); outline-offset: 3px; }
+.kf-app :is(input, select, textarea, .date-trigger) { background: var(--kf-surface); border-color: var(--kf-border-strong); border-radius: var(--kf-radius-sm); min-height: 42px; max-width: 100%; }
+.kf-app :is(.btn, .ghost-btn) { min-height: 40px; border-radius: var(--kf-radius-sm); line-height: 1.2; }
+.kf-app .btn { background: var(--kf-action-gradient); color: var(--kf-surface); border: 1px solid transparent; }
+.kf-app .btn:hover:not(:disabled) { background: var(--kf-primary-hover); }
+.kf-app .ghost-btn, .kf-app .eats-week button { background: var(--kf-surface-muted); color: var(--kf-text-secondary); border: 1px solid var(--kf-border); }
+.kf-app :is(.ghost-btn, .nav-drawer-item, .eats-week button):hover:not(:disabled) { background: var(--kf-surface-hover); }
+.kf-app :is(.ghost-btn[aria-pressed=true], .tab.active, .stock-forecast-day-button.active), .kf-app .eats-week .eats-sort button[aria-pressed=true] {
+  background: var(--kf-brand-soft); color: var(--kf-brand-ink); border-color: var(--kf-brand-border); box-shadow: none;
+}
+.kf-app button:disabled { opacity: .55; cursor: not-allowed; }
+.kf-app .btn-danger { background: var(--kf-danger); color: var(--kf-surface); }
+.kf-app .filter-card h2 { font-size: 23px; margin-bottom: 16px; }
+.kf-app .preset-row { gap: 8px; margin-top: 16px; }
+.kf-app .preset-row .ghost-btn { font-size: 13px; }
+.kf-app .dashboard-day-nav-actions { margin-top: 8px; }
+.kf-app .filter-grid { gap: 16px; }
+.kf-app .stat-card { position: relative; align-self: start; min-width: 0; }
+.kf-app .stat-card h3 { font-size: 14px; line-height: 1.4; }
+.kf-app .stat-card h2 { font-size: clamp(25px, 2vw, 32px); line-height: 1.2; letter-spacing: -.025em; overflow-wrap: anywhere; }
+.kf-app .stat-card h4 { font-size: 15px; line-height: 1.5; }
+.kf-app .kf-stat-icon { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--kf-radius-md); color: var(--kf-primary); background: var(--kf-brand-soft); margin-bottom: 12px; }
+.kf-app .sales-history { margin-top: 16px; padding-top: 8px; border-color: var(--kf-border); }
+.kf-app .sales-history p { font-size: 12px; line-height: 1.5; }
+.kf-app .sales-history small { font-weight: 600; color: var(--kf-text); }
+.kf-app .chart-card h3, .kf-app .card > h3 { font-size: 18px; }
+.kf-app .recharts-cartesian-axis-tick-value { fill: var(--kf-text-secondary); font-size: 12px; }
+.kf-app .recharts-default-tooltip { background: var(--kf-surface) !important; border: 1px solid var(--kf-border) !important; border-radius: var(--kf-radius-md); box-shadow: var(--kf-shadow); color: var(--kf-text); }
+.kf-app .recharts-tooltip-item { color: var(--kf-text) !important; }
+.kf-app .data-table th { background: var(--kf-surface-muted); color: var(--kf-text-secondary); }
+.kf-app .data-table td { border-color: var(--kf-border); }
+.kf-app .data-table tbody tr:hover { background: var(--kf-surface-hover); }
+.kf-app .eats-analysis-actions, .kf-app .kitchen-quality { background: var(--kf-surface-muted); }
+.kf-app .eats-kpis .eats-profit { background: var(--kf-surface); border-color: var(--kf-border); }
+.kf-app .eats-equation:last-of-type { color: var(--kf-text); }
+.kf-app .kf-sidebar { display: none; }
+.kf-app .kf-nav-logo { display: block; width: 175px; max-width: 100%; height: auto; }
+.kf-app .nav-drawer-sheet { height: 100dvh; min-height: 0; background: var(--kf-surface); padding: 16px; }
+.kf-app .nav-drawer-header .kf-nav-logo { width: 140px; }
+.kf-app .nav-drawer-list { gap: 4px; }
+.kf-app .nav-drawer-item { display: flex; align-items: center; gap: 14px; border: 1px solid transparent; border-radius: var(--kf-radius-sm); min-height: 44px; padding: 12px; color: var(--kf-text-secondary); background: transparent; font-weight: 500; font-size: 14px; }
+.kf-app .nav-drawer-item.active { background: var(--kf-brand-soft); color: var(--kf-brand-ink); }
+.kf-app .kf-nav-user { font-size: 13px; color: var(--kf-text-secondary); overflow-wrap: anywhere; padding: 0 12px; }
+@media (min-width: 768px) {
+  .kf-app .app-shell { padding: 24px; }
+  .kf-app .topbar { margin: -24px -24px 24px; }
+  .kf-app .filter-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr); }
+  .kf-app .kpi-grid { align-items: start; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kf-app .chart-grid { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+}
+@media (min-width: 1200px) {
+  .kf-app .kf-workspace { padding-left: 272px; }
+  .kf-app .kf-workspace.kf-sidebar-collapsed { padding-left: 104px; }
+  .kf-app .kf-sidebar { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 24px; width: 248px; position: fixed; inset: 0 auto 0 0; z-index: 50; padding: 16px 12px; background: var(--kf-surface); border-right: 1px solid var(--kf-border); }
+  .kf-app .kf-sidebar-brand { padding: 8px 12px 16px; min-height: 64px; display: flex; align-items: center; }
+  .kf-app .kf-sidebar.is-collapsed { width: 80px; }
+  .kf-app .kf-sidebar.is-collapsed .kf-sidebar-brand { padding: 8px; }
+  .kf-app .kf-sidebar.is-collapsed .kf-nav-label, .kf-app .kf-sidebar.is-collapsed .kf-nav-user { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .kf-app .kf-sidebar.is-collapsed .nav-drawer-item { justify-content: center; padding: 12px 8px; }
+  .kf-app .kpi-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 1500px) {
+  .kf-app .dashboard-space > .kpi-grid > .stat-card { padding-left: 84px; }
+  .kf-app .dashboard-space > .kpi-grid .kf-stat-icon { position: absolute; left: 24px; top: 24px; }
+  .kf-app .dashboard-space > .kpi-grid .sales-history { margin-left: -60px; }
+}
+@media (max-width: 767px) {
+  .kf-app .card, .kf-app .eats-card, .kf-app .eats-kpis article, .kf-app .kitchen-card, .kf-app .kitchen-kpis article { padding: var(--kf-space-2); }
+  .kf-app .topbar { padding: 8px 12px; margin-bottom: 16px; }
+  .kf-app .topbar-left { gap: 4px; }
+  .kf-app .kicker { font-size: 15px; max-width: 125px; }
+  .kf-app .filter-grid { gap: 12px; }
+  .kf-app .filter-card h2 { font-size: 21px; }
+  .kf-app .preset-row { gap: 4px; }
+  .kf-app .preset-row .ghost-btn { font-size: 11px; padding: 8px 2px; }
+  .kf-app .chart-box { height: 240px; }
+  .kf-app :is(input, select, textarea) { font-size: 16px; }
+  .kf-app .kf-stat-icon { float: right; margin: 0 0 8px 8px; }
+  .kf-app .stat-card { width: 100%; }
+  .kf-app .auth-card { padding: 20px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kf-app *, .kf-app *::before, .kf-app *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+.kf-app .sales-history summary { font-size: 12px; color: var(--kf-text-secondary); cursor: pointer; line-height: 1.7; }
+.kf-app .kf-comparison-badge { display: inline-block; padding: 2px 7px; border-radius: var(--kf-radius-sm); background: var(--kf-surface-muted); color: var(--kf-text); font-weight: 700; }
+@media (min-width: 768px) {
+  .kf-app .dashboard-space > .kpi-grid { align-items: stretch; }
+  .kf-app .dashboard-space > .kpi-grid > .stat-card { align-self: stretch; }
+}
+/* Small tables reflow into labelled rows instead of hiding financial amounts. */
+@media (max-width: 600px) {
+  .kf-app .data-table.compact-row-table { display: block; border: 0; background: transparent; }
+  .kf-app .data-table.compact-row-table colgroup, .kf-app .data-table.compact-row-table thead { display: none; }
+  .kf-app .data-table.compact-row-table :is(tbody, tfoot) { display: block; width: 100%; }
+  .kf-app .data-table.compact-row-table tr { display: block; width: 100%; margin-bottom: 8px; border: 1px solid var(--kf-border); border-radius: var(--kf-radius-sm); }
+  .kf-app .data-table.compact-row-table :is(td, th) { display: block; width: 100%; padding: 8px; border: 0; border-top: 1px solid var(--kf-border); text-align: right; white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; font-size: 13px; }
+  .kf-app .data-table.compact-row-table :is(td, th):first-child { border-top: 0; }
+  .kf-app .data-table.compact-row-table :is(td, th)::before { content: attr(data-label); float: left; max-width: 45%; margin-right: 8px; color: var(--kf-text-secondary); font-weight: 500; text-align: left; }
+  .kf-app .data-table.compact-row-table :is(td, th)::after { content: ''; display: block; clear: both; }
+  .kf-app .data-table.compact-row-table .payment-type-label { justify-content: end; }
+  .kf-app .data-table.compact-row-table .payment-type-text { overflow: visible; white-space: normal; }
+  .kf-app .data-table.compact-row-table .empty-cell { text-align: center; }
+  .kf-app .data-table.compact-row-table .empty-cell::before { content: none; }
+}

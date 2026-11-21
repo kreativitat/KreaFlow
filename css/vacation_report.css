@@ -1,0 +1,67 @@
+/* Copyright (C) 2026 Kreativität Works <mail@kreativitat.com> */
+.kf-vacation-report { max-width: 100%; overflow-x: hidden; }
+.kf-vacation-report *, .kf-vacation-report *::before, .kf-vacation-report *::after { box-sizing: border-box; }
+.kf-vacation-controls, .kf-vacation-controls form, .kf-vacation-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem; }
+.kf-vacation-controls { justify-content: space-between; margin: 1rem 0; }
+.kf-vacation-controls input { width: 6.5rem; }
+.kf-vacation-controls .butAction { margin: 0; }
+.kf-vacation-company { font-size: 1.1em; }
+.kf-vacation-note { max-width: 85ch; line-height: 1.6; }
+.kf-vacation-jump { display: flex; flex-wrap: wrap; gap: .5rem 1rem; margin: 1.25rem 0; }
+.kf-vacation-section { margin: 1.8rem 0; scroll-margin-top: 1rem; }
+.kf-vacation-grid { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 11px; }
+.kf-vacation-report table.kf-vacation-grid tr > th, .kf-vacation-report table.kf-vacation-grid tr > td { padding: 6px 2px; text-align: center; overflow-wrap: anywhere; border-bottom: 1px solid #dce2e6; font-variant-numeric: tabular-nums; }
+.kf-vacation-grid th:first-child { width: 18%; text-align: left; padding-left: 8px; }
+.kf-vacation-report table.kf-vacation-grid tr > th:first-child { text-align: left; padding-left: 8px; }
+.kf-vacation-summary th:first-child { width: 22%; }
+.kf-vacation-summary th:nth-child(n+2):nth-child(-n+13) { width: 3.5%; }
+.kf-vacation-summary thead th:nth-child(n+2):nth-child(-n+13) { white-space: nowrap; }
+.kf-vacation-summary th:nth-child(n+14) { width: 7.2%; }
+.kf-vacation-calendar th:nth-child(2), .kf-vacation-calendar th:last-child { width: 5%; }
+.kf-vacation-grid th small { display: block; font-size: 9px; font-weight: normal; }
+.kf-vacation-grid .kf-vacation-mark, .kf-vacation-mark { background: #d3eee0; color: #124833; font-weight: 600; }
+.kf-vacation-grid .kf-vacation-weekend, .kf-vacation-weekend { background: #eef0f2; color: #535d65; }
+.kf-vacation-total { font-weight: bold; }
+.kf-vacation-legend { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.kf-vacation-swatch { display: inline-block; width: 14px; height: 14px; background: #d3eee0; border: 1px solid #99b4a7; }
+.kf-vacation-swatch.kf-vacation-weekend { background: #eef0f2; border-color: #b8c0c6; }
+.kf-vacation-mobile, .kf-vacation-print-company { display: none; }
+.kf-vacation-report .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+@media screen and (max-width: 1100px) {
+ .kf-vacation-grid { display: none; }
+ .kf-vacation-mobile { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1rem; }
+ .kf-vacation-card { border: 1px solid #dce2e6; border-radius: 6px; padding: 1rem; min-width: 0; }
+ .kf-vacation-card h3 { margin: 0 0 .65rem; overflow-wrap: anywhere; }
+ .kf-vacation-card p { font-size: .9em; overflow-wrap: anywhere; }
+ .kf-vacation-phone-calendar { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; text-align: center; }
+ .kf-vacation-phone-calendar > span { min-height: 37px; padding: 5px 0; border-radius: 3px; font-variant-numeric: tabular-nums; }
+ .kf-vacation-phone-calendar small { display: block; font-size: 10px; }
+ .kf-vacation-phone-calendar .kf-vacation-weekday { font-size: 10px; min-height: 20px; overflow-wrap: anywhere; }
+ .kf-vacation-month-totals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; }
+ .kf-vacation-card dl { margin: .75rem 0 0; }
+ .kf-vacation-card dt { font-size: .85em; overflow-wrap: anywhere; }
+ .kf-vacation-card dd { margin: .2rem 0 0; font-weight: 600; }
+ .kf-vacation-balances { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; border-top: 1px solid #dce2e6; padding-top: .75rem; }
+}
+@media screen and (max-width: 767px) {
+ .kf-vacation-controls input, .kf-vacation-controls select, .kf-vacation-controls button { font-size: 16px; max-width: 100%; }
+ .kf-vacation-actions { width: 100%; }
+ .kf-vacation-actions > * { flex: 1 1 auto; text-align: center; white-space: normal; }
+}
+@media print {
+ @page { size: A4 landscape; margin: 10mm; }
+ body { background: white !important; }
+ #id-top, #id-left, #id-right .tabs, #mainmenutd, .side-nav, .topmenu, footer { display: none !important; }
+ #id-container, #id-right, #id-right .fiche, div.fiche { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+ .kf-vacation-controls, .kf-vacation-jump, .kf-vacation-mobile, .kf-vacation-legend { display: none !important; }
+ .kf-vacation-grid { display: table !important; font-size: 8pt; }
+ .kf-vacation-section { break-before: page; margin: 0; }
+ .kf-vacation-section h2 { margin: 0 0 2mm; }
+ .kf-vacation-section:first-of-type { break-before: auto; }
+ .kf-vacation-print-company { display: block; }
+ .kf-vacation-grid thead { display: table-header-group; }
+ .kf-vacation-grid tr { break-inside: avoid; }
+ .kf-vacation-grid th, .kf-vacation-grid td { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+.kf-vacation-grid .kf-vacation-holiday, .kf-vacation-swatch.kf-vacation-holiday { background: #fff0cd; color: #57421a; }

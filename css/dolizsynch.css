@@ -1,0 +1,56 @@
+/* Copyright (C) 2026 Kreativität Works <mail@kreativitat.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License,
+ * or (at your option) any later version.
+ */
+
+/* Make select2 multi-select dropdowns full width in setup forms */
+.select2-container--default .select2-selection--multiple {
+    width: 100% !important;
+    min-width: 100% !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    width: 100% !important;
+    min-width: 600px !important;
+    display: block !important;
+}
+
+/* Ensure select2 container takes full width of parent */
+span.select2-container,
+.select2-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 600px !important;
+}
+
+/* Make the search input in multi-select more visible */
+.select2-search--inline .select2-search__field {
+    min-width: 150px !important;
+}
+
+/* Improve spacing for multi-select choices */
+.select2-selection__choice {
+    margin: 3px 5px 3px 0 !important;
+    padding: 3px 8px !important;
+}
+
+/* Full width for FormSetup multi-select fields */
+.tablewithfields .field-multi-select .select2-container,
+.tablewithfields td .select2-container {
+    width: 100% !important;
+    min-width: 600px !important;
+}
+
+/* Override inline styles on select elements */
+select[multiple].select2-hidden-accessible {
+    min-width: 600px !important;
+}
+
+/* Ensure the underlying select element has proper width */
+#setup-DOLIZSYNCH_INTERENTITY_SELLER_ENTITY {
+    min-width: 600px !important;
+    width: 100% !important;
+}

@@ -1,0 +1,1073 @@
+<div class="report-container container-fluid mt-3 mb-5">
+  <div class="row">
+    <div class="col-12 mb-3">
+      <h3>Previsão de Vendas (Weather-aware)</h3>
+      <small class="d-block"
+        >Regressão linear simples: receita diária ~ temperatura média diária.
+        Usa histórico selecionado e previsão meteorológica para 7 dias.</small
+      >
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="row mb-4 align-items-stretch">
+    <div class="col-md-3 mb-3">
+      <div class="card shadow-sm h-100">
+        <div
+          class="card-body d-flex flex-column justify-content-center"
+          style="min-height: 150px"
+        >
+          <h5>Receita Histórica</h5>
+          <div class="mb-1">
+            <small class="text-muted">S/IVA</small>
+            <h3 class="mb-0">111.932,92 €</h3>
+          </div>
+          <div>
+            <small class="text-muted">C/IVA</small>
+            <h4 class="mb-0">131.277,42 €</h4>
+          </div>
+          <small class="text-muted d-block"
+            >Período: 2025-04-06 a 2026-04-04</small
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card shadow-sm h-100">
+        <div
+          class="card-body d-flex flex-column justify-content-center"
+          style="min-height: 150px"
+        >
+          <h5>Média Diária Hist.</h5>
+          <div class="mb-1">
+            <small class="text-muted">S/IVA</small>
+            <h3 class="mb-0">1.243,70 €</h3>
+          </div>
+          <div>
+            <small class="text-muted">C/IVA</small>
+            <h4 class="mb-0">1.458,64 €</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card shadow-sm h-100">
+        <div
+          class="card-body d-flex flex-column justify-content-center"
+          style="min-height: 150px"
+        >
+          <h5>Previsão 7 dias</h5>
+          <div class="mb-1">
+            <small class="text-muted">S/IVA</small>
+            <h3 class="mb-0">11.074,74 €</h3>
+          </div>
+          <div>
+            <small class="text-muted">C/IVA</small>
+            <h4 class="mb-0">12.972,59 €</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card shadow-sm h-100">
+        <div
+          class="card-body d-flex flex-column justify-content-center"
+          style="min-height: 150px"
+        >
+          <h5>Média Prevista (dia)</h5>
+          <div class="mb-1">
+            <small class="text-muted">S/IVA</small>
+            <h3 class="mb-0">1.582,11 €</h3>
+          </div>
+          <div>
+            <small class="text-muted">C/IVA</small>
+            <h4 class="mb-0">1.853,23 €</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card shadow-sm">
+        <div class="card-header">Histórico vs Previsão (receita diária)</div>
+        <div class="card-body">
+          <krwidget
+            widget-name="chartjs69d21e91165851"
+            widget-type="koolreport/chartjs/LineChart"
+            class="bs4"
+            ><div class="chartjs-container" style="height: 320px">
+              <div class="chartjs-size-monitor">
+                <div class="chartjs-size-monitor-expand">
+                  <div class=""></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink">
+                  <div class=""></div>
+                </div>
+              </div>
+              <canvas
+                id="chartjs69d21e91165851"
+                width="2388"
+                height="480"
+                style="display: block; height: 320px; width: 1592px"
+                class="chartjs-render-monitor"
+              ></canvas>
+            </div>
+            <script type="text/javascript">
+              KoolReport.widget.init(
+                {
+                  js: [
+                    "\/custom\/kreareports\/assets\/3609500840\/Chart.bundle.min.js",
+                    "\/custom\/kreareports\/assets\/3609500840\/chartjs.js",
+                    [],
+                  ],
+                  css: [],
+                },
+                function () {
+                  chartjs69d21e91165851 = new ChartJS("chartjs69d21e91165851", {
+                    type: "line",
+                    data: {
+                      labels: [
+                        "2026-01-05",
+                        "2026-01-06",
+                        "2026-01-07",
+                        "2026-01-08",
+                        "2026-01-09",
+                        "2026-01-10",
+                        "2026-01-11",
+                        "2026-01-12",
+                        "2026-01-13",
+                        "2026-01-14",
+                        "2026-01-15",
+                        "2026-01-16",
+                        "2026-01-17",
+                        "2026-01-18",
+                        "2026-01-19",
+                        "2026-01-20",
+                        "2026-01-21",
+                        "2026-01-22",
+                        "2026-01-23",
+                        "2026-01-24",
+                        "2026-01-25",
+                        "2026-01-26",
+                        "2026-01-27",
+                        "2026-01-28",
+                        "2026-01-29",
+                        "2026-01-30",
+                        "2026-01-31",
+                        "2026-02-01",
+                        "2026-02-02",
+                        "2026-02-03",
+                        "2026-02-04",
+                        "2026-02-05",
+                        "2026-02-06",
+                        "2026-02-07",
+                        "2026-02-08",
+                        "2026-02-09",
+                        "2026-02-10",
+                        "2026-02-11",
+                        "2026-02-12",
+                        "2026-02-13",
+                        "2026-02-14",
+                        "2026-02-15",
+                        "2026-02-16",
+                        "2026-02-17",
+                        "2026-02-18",
+                        "2026-02-19",
+                        "2026-02-20",
+                        "2026-02-21",
+                        "2026-02-22",
+                        "2026-02-23",
+                        "2026-02-24",
+                        "2026-02-25",
+                        "2026-02-26",
+                        "2026-02-27",
+                        "2026-02-28",
+                        "2026-03-01",
+                        "2026-03-02",
+                        "2026-03-03",
+                        "2026-03-04",
+                        "2026-03-05",
+                        "2026-03-06",
+                        "2026-03-07",
+                        "2026-03-08",
+                        "2026-03-09",
+                        "2026-03-10",
+                        "2026-03-11",
+                        "2026-03-12",
+                        "2026-03-13",
+                        "2026-03-14",
+                        "2026-03-15",
+                        "2026-03-16",
+                        "2026-03-17",
+                        "2026-03-18",
+                        "2026-03-19",
+                        "2026-03-20",
+                        "2026-03-21",
+                        "2026-03-22",
+                        "2026-03-23",
+                        "2026-03-24",
+                        "2026-03-25",
+                        "2026-03-26",
+                        "2026-03-27",
+                        "2026-03-28",
+                        "2026-03-29",
+                        "2026-03-30",
+                        "2026-03-31",
+                        "2026-04-01",
+                        "2026-04-02",
+                        "2026-04-03",
+                        "2026-04-04",
+                        "2026-04-05",
+                        "2026-04-06",
+                        "2026-04-07",
+                        "2026-04-08",
+                        "2026-04-09",
+                        "2026-04-10",
+                        "2026-04-11",
+                      ],
+                      datasets: [
+                        {
+                          label: "Receita",
+                          fill: false,
+                          borderColor: "#3366CC",
+                          backgroundColor: "#3366CC",
+                          data: [
+                            768.05, 802.6, 651.9, 1078.1, 1529.85, 2096.9,
+                            395.8, 537.9, 779.15, 611.7, 631.2, 872.55, 1865.35,
+                            871, 656, 774.8, 771.1, 1484.35, 884.65, 1748.15,
+                            1459.25, 769.57, 611.1, 977.02, 567.42, 1893.6,
+                            2548.96, 665.17, 590.9, 510.49, 896.85, 849.1,
+                            1552.34, 1800.22, 1146.12, 331.62, 505.82, 505.3,
+                            836.55, 1071.29, 3541.32, 1287.95, 543.35, 1188.95,
+                            834.45, 1693.75, 1744.65, 2901.65, 2459.4, 750.65,
+                            943.35, 605.25, 900.6, 1574.4, 3082.5, 3140.35,
+                            718.6, 1095.85, 1391.25, 660.2, 1347.05, 2967.7,
+                            1852.4, 425.05, 710.1, 978.3, 1068.05, 1068, 1933.2,
+                            2098.85, 1130.86, 1027.88, 1520.97, 1542.79,
+                            2037.89, 3285.93, 1964.9, 675.23, 1027.65, 1368.04,
+                            1644.33, 3523.68, 2821.14, 2563.97, 1551.36,
+                            1772.78, 3672.58, 4342.1, 4851.68, 3544.7,
+                            1935.952731252555, 1889.496652029636,
+                            1406.3451945722295, 1781.981903758535,
+                            1991.1810341730331, 2066.1264719101323,
+                            1901.5098120750538,
+                          ],
+                          fdata: [
+                            "768",
+                            "803",
+                            "652",
+                            "1,078",
+                            "1,530",
+                            "2,097",
+                            "396",
+                            "538",
+                            "779",
+                            "612",
+                            "631",
+                            "873",
+                            "1,865",
+                            "871",
+                            "656",
+                            "775",
+                            "771",
+                            "1,484",
+                            "885",
+                            "1,748",
+                            "1,459",
+                            "770",
+                            "611",
+                            "977",
+                            "567",
+                            "1,894",
+                            "2,549",
+                            "665",
+                            "591",
+                            "510",
+                            "897",
+                            "849",
+                            "1,552",
+                            "1,800",
+                            "1,146",
+                            "332",
+                            "506",
+                            "505",
+                            "837",
+                            "1,071",
+                            "3,541",
+                            "1,288",
+                            "543",
+                            "1,189",
+                            "834",
+                            "1,694",
+                            "1,745",
+                            "2,902",
+                            "2,459",
+                            "751",
+                            "943",
+                            "605",
+                            "901",
+                            "1,574",
+                            "3,083",
+                            "3,140",
+                            "719",
+                            "1,096",
+                            "1,391",
+                            "660",
+                            "1,347",
+                            "2,968",
+                            "1,852",
+                            "425",
+                            "710",
+                            "978",
+                            "1,068",
+                            "1,068",
+                            "1,933",
+                            "2,099",
+                            "1,131",
+                            "1,028",
+                            "1,521",
+                            "1,543",
+                            "2,038",
+                            "3,286",
+                            "1,965",
+                            "675",
+                            "1,028",
+                            "1,368",
+                            "1,644",
+                            "3,524",
+                            "2,821",
+                            "2,564",
+                            "1,551",
+                            "1,773",
+                            "3,673",
+                            "4,342",
+                            "4,852",
+                            "3,545",
+                            "1,936",
+                            "1,889",
+                            "1,406",
+                            "1,782",
+                            "1,991",
+                            "2,066",
+                            "1,902",
+                          ],
+                        },
+                        {
+                          label: "S\u00e9rie",
+                          fill: false,
+                          borderColor: "#DC3912",
+                          backgroundColor: "#DC3912",
+                          data: [
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                          ],
+                          fdata: [
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Hist\u00f3rico",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                            "Forecast",
+                          ],
+                        },
+                      ],
+                    },
+                    options: {
+                      maintainAspectRatio: false,
+                      legend: { display: false },
+                    },
+                    cKeys: ["date", "revenue", "type"],
+                  });
+                },
+              );
+            </script></krwidget
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table forecast -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow-sm">
+        <div class="card-header">Previsão por dia (próximos 7)</div>
+        <div class="card-body">
+          <krwidget
+            widget-name="datatables69d21e91167e22"
+            widget-type="koolreport/datagrid/DataTables"
+            class="bs4"
+            ><div
+              id="datatables69d21e91167e22_wrapper"
+              class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer"
+            >
+              <div class="row">
+                <div class="col-sm-12 col-md-6"></div>
+                <div class="col-sm-12 col-md-6"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <table
+                    id="datatables69d21e91167e22"
+                    class="table table-striped table-sm dataTable no-footer"
+                    role="grid"
+                    aria-describedby="datatables69d21e91167e22_info"
+                  >
+                    <thead>
+                      <tr role="row">
+                        <th
+                          class="header-date sorting_asc"
+                          tabindex="0"
+                          aria-controls="datatables69d21e91167e22"
+                          rowspan="1"
+                          colspan="1"
+                          aria-sort="ascending"
+                          aria-label="
+                        
+                            Data                        
+                    : activate to sort column descending"
+                          style="width: 129.354px"
+                        >
+                          <div class="header-content-wrapper">Data</div>
+                        </th>
+                        <th
+                          class="header-forecast_ht text-right sorting"
+                          tabindex="0"
+                          aria-controls="datatables69d21e91167e22"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="
+                        
+                            Previsto S/IVA (€)                        
+                    : activate to sort column ascending"
+                          style="width: 224.271px"
+                        >
+                          <div class="header-content-wrapper">
+                            Previsto S/IVA (€)
+                          </div>
+                        </th>
+                        <th
+                          class="header-forecast_ttc text-right sorting"
+                          tabindex="0"
+                          aria-controls="datatables69d21e91167e22"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="
+                        
+                            Previsto C/IVA (€)                        
+                    : activate to sort column ascending"
+                          style="width: 225.635px"
+                        >
+                          <div class="header-content-wrapper">
+                            Previsto C/IVA (€)
+                          </div>
+                        </th>
+                        <th
+                          class="header-temp text-right sorting"
+                          tabindex="0"
+                          aria-controls="datatables69d21e91167e22"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="
+                        
+                            Temp. média (°C)                        
+                    : activate to sort column ascending"
+                          style="width: 221.302px"
+                        >
+                          <div class="header-content-wrapper">
+                            Temp. média (°C)
+                          </div>
+                        </th>
+                        <th
+                          class="header-precip text-right sorting"
+                          tabindex="0"
+                          aria-controls="datatables69d21e91167e22"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="
+                        
+                            Precip. (mm)                        
+                    : activate to sort column ascending"
+                          style="width: 170.646px"
+                        >
+                          <div class="header-content-wrapper">Precip. (mm)</div>
+                        </th>
+                        <th
+                          class="header-precip_intensity text-right sorting"
+                          tabindex="0"
+                          aria-controls="datatables69d21e91167e22"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="
+                        
+                            Intensidade                        
+                    : activate to sort column ascending"
+                          style="width: 158.25px"
+                        >
+                          <div class="header-content-wrapper">Intensidade</div>
+                        </th>
+                        <th
+                          class="header-precip_prob text-right sorting"
+                          tabindex="0"
+                          aria-controls="datatables69d21e91167e22"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="
+                        
+                            Prob. Chuva                        
+                    : activate to sort column ascending"
+                          style="width: 166.542px"
+                        >
+                          <div class="header-content-wrapper">Prob. Chuva</div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">2026-04-05</td>
+                        <td class="text-right">1,652.73</td>
+                        <td class="text-right">1,935.95</td>
+                        <td class="text-right">15.6</td>
+                        <td class="text-right">0.0</td>
+                        <td class="text-right">Sem chuva</td>
+                        <td class="text-right">Baixa</td>
+                      </tr>
+                      <tr role="row" class="even">
+                        <td class="sorting_1">2026-04-06</td>
+                        <td class="text-right">1,613.07</td>
+                        <td class="text-right">1,889.50</td>
+                        <td class="text-right">17.3</td>
+                        <td class="text-right">3.1</td>
+                        <td class="text-right">Chuva leve</td>
+                        <td class="text-right">Média</td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">2026-04-07</td>
+                        <td class="text-right">1,200.60</td>
+                        <td class="text-right">1,406.35</td>
+                        <td class="text-right">14.1</td>
+                        <td class="text-right">18.6</td>
+                        <td class="text-right">Chuva forte</td>
+                        <td class="text-right">Alta</td>
+                      </tr>
+                      <tr role="row" class="even">
+                        <td class="sorting_1">2026-04-08</td>
+                        <td class="text-right">1,521.28</td>
+                        <td class="text-right">1,781.98</td>
+                        <td class="text-right">12.7</td>
+                        <td class="text-right">3.5</td>
+                        <td class="text-right">Chuva leve</td>
+                        <td class="text-right">Média</td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">2026-04-09</td>
+                        <td class="text-right">1,699.88</td>
+                        <td class="text-right">1,991.18</td>
+                        <td class="text-right">18.1</td>
+                        <td class="text-right">0.0</td>
+                        <td class="text-right">Sem chuva</td>
+                        <td class="text-right">Baixa</td>
+                      </tr>
+                      <tr role="row" class="even">
+                        <td class="sorting_1">2026-04-10</td>
+                        <td class="text-right">1,763.86</td>
+                        <td class="text-right">2,066.13</td>
+                        <td class="text-right">21.6</td>
+                        <td class="text-right">0.0</td>
+                        <td class="text-right">Sem chuva</td>
+                        <td class="text-right">Baixa</td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">2026-04-11</td>
+                        <td class="text-right">1,623.32</td>
+                        <td class="text-right">1,901.51</td>
+                        <td class="text-right">15.6</td>
+                        <td class="text-right">1.4</td>
+                        <td class="text-right">Chuva leve</td>
+                        <td class="text-right">Média</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-5">
+                  <div
+                    class="dataTables_info"
+                    id="datatables69d21e91167e22_info"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Showing 1 to 7 of 7 entries
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-7"></div>
+              </div>
+            </div>
+            <script type="text/javascript">
+              KoolReport.widget.init(
+                {
+                  js: [
+                    "\/custom\/kreareports\/assets\/1086894486\/jquery.min.js",
+                    [
+                      "\/custom\/kreareports\/assets\/1538240997\/KRDataTables.js",
+                      "\/custom\/kreareports\/assets\/1538240997\/datatables.min.js",
+                      [
+                        "\/custom\/kreareports\/assets\/1538240997\/pagination\/input.js",
+                        "\/custom\/kreareports\/assets\/1538240997\/datatables.bs4.min.js",
+                        "\/custom\/kreareports\/assets\/1538240997\/AutoFill-2.3.5\/js\/dataTables.autoFill.min.js",
+                        "\/custom\/kreareports\/assets\/1538240997\/ColReorder-1.5.2\/js\/dataTables.colReorder.min.js",
+                        "\/custom\/kreareports\/assets\/1538240997\/RowGroup-1.1.2\/js\/dataTables.rowGroup.min.js",
+                        "\/custom\/kreareports\/assets\/1538240997\/Select-1.3.1\/js\/dataTables.select.min.js",
+                      ],
+                    ],
+                  ],
+                  css: [
+                    "\/custom\/kreareports\/assets\/1538240997\/KRDataTables.css",
+                    "\/custom\/kreareports\/assets\/1538240997\/datatables.min.css",
+                    "\/custom\/kreareports\/assets\/1538240997\/datatables.bs4.min.css",
+                  ],
+                },
+                function () {
+                  var name = "datatables69d21e91167e22";
+                  var dtOptions = {
+                    searching: false,
+                    paging: false,
+                    pageLength: 10,
+                    order: [[0, "asc"]],
+                    columnDefs: [
+                      { targets: [1, 2, 3, 4, 5, 6], className: "text-right" },
+                      { targets: 0, type: "string" },
+                      { targets: 1, type: "number" },
+                      { targets: 2, type: "number" },
+                      { targets: 3, type: "number" },
+                      { targets: 4, type: "number" },
+                      { targets: 5, type: "string" },
+                      { targets: 6, type: "string" },
+                    ],
+                  };
+                  var fastRender = 0;
+                  if (fastRender) {
+                    var dataRows = [
+                      {
+                        date: "2026-04-05",
+                        forecast_ht: "1,652.73",
+                        forecast_ttc: "1,935.95",
+                        temp: "15.6",
+                        precip: "0.0",
+                        precip_intensity: "Sem chuva",
+                        precip_prob: "Baixa",
+                        holiday: 0,
+                      },
+                      {
+                        date: "2026-04-06",
+                        forecast_ht: "1,613.07",
+                        forecast_ttc: "1,889.50",
+                        temp: "17.3",
+                        precip: "3.1",
+                        precip_intensity: "Chuva leve",
+                        precip_prob: "M\u00e9dia",
+                        holiday: 0,
+                      },
+                      {
+                        date: "2026-04-07",
+                        forecast_ht: "1,200.60",
+                        forecast_ttc: "1,406.35",
+                        temp: "14.1",
+                        precip: "18.6",
+                        precip_intensity: "Chuva forte",
+                        precip_prob: "Alta",
+                        holiday: 0,
+                      },
+                      {
+                        date: "2026-04-08",
+                        forecast_ht: "1,521.28",
+                        forecast_ttc: "1,781.98",
+                        temp: "12.7",
+                        precip: "3.5",
+                        precip_intensity: "Chuva leve",
+                        precip_prob: "M\u00e9dia",
+                        holiday: 0,
+                      },
+                      {
+                        date: "2026-04-09",
+                        forecast_ht: "1,699.88",
+                        forecast_ttc: "1,991.18",
+                        temp: "18.1",
+                        precip: "0.0",
+                        precip_intensity: "Sem chuva",
+                        precip_prob: "Baixa",
+                        holiday: 0,
+                      },
+                      {
+                        date: "2026-04-10",
+                        forecast_ht: "1,763.86",
+                        forecast_ttc: "2,066.13",
+                        temp: "21.6",
+                        precip: "0.0",
+                        precip_intensity: "Sem chuva",
+                        precip_prob: "Baixa",
+                        holiday: 0,
+                      },
+                      {
+                        date: "2026-04-11",
+                        forecast_ht: "1,623.32",
+                        forecast_ttc: "1,901.51",
+                        temp: "15.6",
+                        precip: "1.4",
+                        precip_intensity: "Chuva leve",
+                        precip_prob: "M\u00e9dia",
+                        holiday: 0,
+                      },
+                    ];
+                    dtOptions.data = dataRows;
+                    // datatables69d21e91167e22_data.dataRows = dataRows;
+                  }
+                  window[name + "_state"] = {};
+                  var dt = (window[name] = $("#" + name).DataTable(dtOptions));
+
+                  var datatables69d21e91167e22_data = {
+                    id: "datatables69d21e91167e22",
+                    searchOnEnter: 0,
+                    searchMode: { smart: 0 },
+                    serverSide: 0,
+                    serverSideInstantSearch: 0,
+                    overrideSearchInput: 1,
+                    rowDetailData: dtOptions.rowDetailData,
+                    showColumnKeys: [
+                      "date",
+                      "forecast_ht",
+                      "forecast_ttc",
+                      "temp",
+                      "precip",
+                      "precip_intensity",
+                      "precip_prob",
+                    ],
+                    columns: {
+                      date: { label: "Data" },
+                      forecast_ht: {
+                        label: "Previsto S\/IVA (\u20ac)",
+                        type: "number",
+                        decimals: 2,
+                        cssClass: { td: "text-right" },
+                      },
+                      forecast_ttc: {
+                        label: "Previsto C\/IVA (\u20ac)",
+                        type: "number",
+                        decimals: 2,
+                        cssClass: { td: "text-right" },
+                      },
+                      temp: {
+                        label: "Temp. m\u00e9dia (\u00b0C)",
+                        type: "number",
+                        decimals: 1,
+                        cssClass: { td: "text-right" },
+                      },
+                      precip: {
+                        label: "Precip. (mm)",
+                        type: "number",
+                        decimals: 1,
+                        cssClass: { td: "text-right" },
+                      },
+                      precip_intensity: {
+                        label: "Intensidade",
+                        cssClass: { td: "text-right" },
+                      },
+                      precip_prob: {
+                        label: "Prob. Chuva",
+                        cssClass: { td: "text-right" },
+                      },
+                    },
+                    editButtons: {
+                      add: "<div class='btn-add-wrapper'><button class='btn btn-secondary' type='button' >Add<\/button><\/div>",
+                      edit: "<div class='btn-edit-wrapper'><button class='btn btn-secondary' type='button' >Edit<\/button><\/div>",
+                      cancelEdit:
+                        "<div class='btn-cancelEdit-wrapper' style='display: none'><button class='btn btn-secondary' type='button' >Cancel<\/button><\/div>",
+                      update:
+                        "<div class='btn-update-wrapper' style='display: none'><button class='btn btn-secondary' type='button' >Update<\/button><\/div>",
+                      delete:
+                        "<div class='btn-delete-wrapper'><button class='btn btn-secondary' type='button' >Delete<\/button><\/div>",
+                      insert:
+                        "<div class='btn-insert-wrapper'><button class='btn btn-secondary' type='button' >Insert<\/button><\/div>",
+                      cancelInsert:
+                        "<div class='btn-cancelInsert-wrapper'><button class='btn btn-secondary' type='button' >Cancel<\/button><\/div>",
+                    },
+                    editUrl: "",
+                    fastRender: fastRender,
+                    rowDetailIcon: 1,
+                    rowDetailSelector: "",
+                    clientRowSpanColumns: null,
+                  };
+                  datatables69d21e91167e22_data.rawData = [
+                    {
+                      date: "2026-04-05",
+                      forecast_ht: 1652.7289385742038,
+                      forecast_ttc: 1935.952731252555,
+                      temp: 15.6,
+                      precip: 0,
+                      precip_intensity: "Sem chuva",
+                      precip_prob: "Baixa",
+                      holiday: 0,
+                    },
+                    {
+                      date: "2026-04-06",
+                      forecast_ht: 1613.069237557259,
+                      forecast_ttc: 1889.496652029636,
+                      temp: 17.3,
+                      precip: 3.1,
+                      precip_intensity: "Chuva leve",
+                      precip_prob: "M\u00e9dia",
+                      holiday: 0,
+                    },
+                    {
+                      date: "2026-04-07",
+                      forecast_ht: 1200.6013179828383,
+                      forecast_ttc: 1406.3451945722295,
+                      temp: 14.1,
+                      precip: 18.6,
+                      precip_intensity: "Chuva forte",
+                      precip_prob: "Alta",
+                      holiday: 0,
+                    },
+                    {
+                      date: "2026-04-08",
+                      forecast_ht: 1521.2835586392605,
+                      forecast_ttc: 1781.981903758535,
+                      temp: 12.7,
+                      precip: 3.5,
+                      precip_intensity: "Chuva leve",
+                      precip_prob: "M\u00e9dia",
+                      holiday: 0,
+                    },
+                    {
+                      date: "2026-04-09",
+                      forecast_ht: 1699.877514565499,
+                      forecast_ttc: 1991.1810341730331,
+                      temp: 18.1,
+                      precip: 0,
+                      precip_intensity: "Sem chuva",
+                      precip_prob: "Baixa",
+                      holiday: 0,
+                    },
+                    {
+                      date: "2026-04-10",
+                      forecast_ht: 1763.8586705940736,
+                      forecast_ttc: 2066.1264719101323,
+                      temp: 21.6,
+                      precip: 0,
+                      precip_intensity: "Sem chuva",
+                      precip_prob: "Baixa",
+                      holiday: 0,
+                    },
+                    {
+                      date: "2026-04-11",
+                      forecast_ht: 1623.3249100901,
+                      forecast_ttc: 1901.5098120750538,
+                      temp: 15.6,
+                      precip: 1.4,
+                      precip_intensity: "Chuva leve",
+                      precip_prob: "M\u00e9dia",
+                      holiday: 0,
+                    },
+                  ];
+                  KRdatatables69d21e91167e22 = KoolReport.KRDataTables.create(
+                    datatables69d21e91167e22_data,
+                  );
+                },
+              );
+            </script></krwidget
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

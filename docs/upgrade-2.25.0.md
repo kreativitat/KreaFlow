@@ -1,0 +1,7 @@
+# KreaFlow 2.25.0 upgrade
+
+Apply `sql/llx_kreaflow_eats_analysis.sql` before deploying the 2.25.0 runtime, replacing the standard `llx_` prefix with the installation's configured prefix through the native Dolibarr database/bootstrap tools. New activations load the same idempotent CREATE TABLE through `_load_tables`. No existing table is altered and no financial records or permission grants are changed. Do not reactivate an existing module solely to create this table.
+
+The table retains immutable reference snapshots, model output and generation claims scoped to the active entity. A unique key and database advisory lock prevent duplicate requests. A failed or interrupted request is retained and never automatically replayed; a new reference version may be generated. Administrative recovery of an unchanged failed version requires an explicit decision after checking provider acceptance. Do not delete claims to retry blindly.
+
+AI and KreaProducts must be enabled, with an existing supported provider, model and API key configured. Disabled integrations hide the panel and cannot read cached analysis through the direct route. Cached output is retrieved only for a freshly recomputed permitted-reference fingerprint, so users without cost/product/history access cannot receive a more privileged analysis. Model/key changes and elapsed time do not invalidate otherwise unchanged reference data.

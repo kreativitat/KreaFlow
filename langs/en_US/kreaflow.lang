@@ -1,0 +1,61 @@
+# Translation file
+
+#
+# Generic
+#
+
+# Module label 'ModuleKreaFlowName'
+ModuleKreaFlowName = KreaFlow
+# Module description 'ModuleKreaFlowDesc'
+ModuleKreaFlowDesc = KreaFlow business integration, synchronization, workforce tools and mobile dashboards
+
+#
+# Admin page
+#
+KreaFlowSetup = KreaFlow setup
+Settings = Settings
+KreaFlowSetupPage = KreaFlow setup page
+KreaFlowProductLayoutSetup = Product category layout
+KREAFLOW_PRODUCTLIST_CATEGORIES = Categories shown on product page
+KREAFLOW_PRODUCTLIST_CATEGORIESTooltip = Select product categories that should be shown on the mobile product page.
+KREAFLOW_PRODUCTLIST_FILTER_TOSELL = To sell only
+KREAFLOW_PRODUCTLIST_FILTER_TOSELLTooltip = Restrict products to sellable items (p.tosell = 1).
+KREAFLOW_HISTORY_LIMIT_DAYS = History limit (days)
+KREAFLOW_HISTORY_LIMIT_DAYSTooltip = Users without the "Read data older than configured history limit" permission can only access dated data newer than this limit.
+KREAFLOW_STOCK_FORECAST_ENTITIES = Stock forecast entities
+KREAFLOW_STOCK_FORECAST_ENTITIESTooltip = Select the entities where the Patties Stock Forecast tab and API are available. No entities are enabled until explicitly selected.
+KREAFLOW_FECHO_EDIT_LIMIT_DAYS = Fecho edit age limit (days)
+KREAFLOW_FECHO_EDIT_LIMIT_DAYSTooltip = Users without the "Edit Fecho Financeiro records older than configured edit limit" permission can only edit Fecho records newer than this limit.
+KreaFlowProductLayoutNoCategoryConfigured = No categories are configured yet. Configure at least one category to display product sections.
+KreaFlowProductLayoutConfiguredIds = Configured category IDs
+NewSection=New section
+KREAFLOW_MYPARAM1 = My param 1
+KREAFLOW_MYPARAM1Tooltip = My param 1 tooltip
+KREAFLOW_MYPARAM2=My param 2
+KREAFLOW_MYPARAM2Tooltip=My param 2 tooltip
+
+
+#
+# About page
+#
+About = About
+KreaFlowAbout = About KreaFlow
+KreaFlowAboutPage = KreaFlow about page
+
+#
+# Sample page
+#
+KreaFlowArea = Home KreaFlow
+KreaFlowMobileApp = Mobile App
+KreaFlowFrontendBuildMissing = Frontend build is missing. Build React app and publish to custom/kreaflow/frontend.
+MyPageName = My page name
+
+#
+# Sample widget
+#
+MyWidget = My widget
+MyWidgetDescription = My widget description
+
+KitchenSettings=Kitchen setup
+KitchenStations=Visible kitchen stations
+KitchenStationsHelp=Choose the stations for the active company. All selected stations appear together on the dashboard, without a station filter. The current working day uses the active company’s DoliZSynch day-change setting in Europe/Lisbon; preparing items are the default.

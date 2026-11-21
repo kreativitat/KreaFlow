@@ -1,0 +1,60 @@
+/* Copyright (C) 2026 Kreativität Works <mail@kreativitat.com>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License,
+ * or (at your option) any later version.
+ */
+
+/* Scoped to the standalone KreaFlow document; never loaded by Dolibarr core. */
+.kf-app {
+  --kf-primary: #E63D00;
+  --kf-primary-hover: #C93400;
+  --kf-secondary: #FF8A00;
+  --kf-accent: #FFBC47;
+  --kf-background: #F7F8FA;
+  --kf-surface: #FFFFFF;
+  --kf-surface-muted: #F3F4F6;
+  --kf-surface-hover: #ECEEF1;
+  --kf-text: #111111;
+  --kf-text-secondary: #60646C;
+  --kf-text-muted: #858B94;
+  --kf-border: #E5E7EB;
+  --kf-border-strong: #D1D5DB;
+  --kf-success: #16835D;
+  --kf-success-bg: #E5F7EE;
+  --kf-danger: #DC3545;
+  --kf-danger-bg: #FDEBEC;
+  --kf-warning: #B76B00;
+  --kf-warning-bg: #FFF4DE;
+  --kf-radius-sm: 8px;
+  --kf-radius-md: 12px;
+  --kf-radius-lg: 16px;
+  --kf-shadow: 0 2px 12px rgba(17, 24, 39, .035);
+  --kf-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --kf-brand-soft: #FFF3EC;
+  --kf-brand-border: #F5B294;
+  --kf-brand-ink: #B33300;
+  --kf-chart-line: #F05A00;
+  --kf-chart-bar: #FFAD3D;
+  --kf-chart-dark: #77351F;
+  --kf-chart-neutral: #6B7280;
+  --kf-chart-light: #D1D5DB;
+  --kf-brand-gradient: linear-gradient(105deg, #FF8A00 0%, #FF6500 55%, #E63D00 100%);
+  /* Darkened action stops keep white labels above 4.5:1 at every point. */
+  --kf-action-gradient: linear-gradient(105deg, #B84A00 0%, #C13F00 55%, #C93400 100%);
+  --kf-space-1: 8px;
+  --kf-space-2: 16px;
+  --kf-space-3: 24px;
+  --kf-space-4: 32px;
+  --bg: var(--kf-background);
+  --card: var(--kf-surface);
+  --ink: var(--kf-text);
+  --ink-soft: var(--kf-text-secondary);
+  --brand: var(--kf-primary);
+  --brand-ink: var(--kf-brand-ink);
+  --secondary: var(--kf-secondary);
+  --accent: var(--kf-accent);
+  --line: var(--kf-border);
+  --line-strong: var(--kf-border-strong);
+  --shadow: var(--kf-shadow);
+}

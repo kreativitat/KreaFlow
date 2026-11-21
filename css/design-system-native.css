@@ -1,0 +1,25 @@
+/* Copyright (C) 2026 Kreativität Works <mail@kreativitat.com>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License,
+ * or (at your option) any later version.
+ */
+/* Native Dolibarr markup and navigation retain their existing structure. */
+body.kf-native { background: var(--kf-background); color: var(--kf-text); font-family: var(--kf-font); }
+.kf-native #id-right, .kf-native .fiche { background: var(--kf-background); }
+.kf-native .fichecenter { color: var(--kf-text); }
+.kf-native :is(.tabBar, .border, .noborder, .div-table-responsive) { background-color: var(--kf-surface); border-color: var(--kf-border); }
+.kf-native .tabBar { border-radius: var(--kf-radius-md); box-shadow: var(--kf-shadow); }
+.kf-native :is(.liste_titre, tr.liste_titre th, tr.liste_titre td) { background: var(--kf-surface-muted); color: var(--kf-text-secondary); border-color: var(--kf-border); }
+.kf-native tr.oddeven { background-color: var(--kf-surface); }
+.kf-native tr.oddeven:hover { background-color: var(--kf-surface-hover); }
+.kf-native :is(.button, .butAction) { background: var(--kf-action-gradient); border: 1px solid var(--kf-primary-hover); color: var(--kf-surface); border-radius: var(--kf-radius-sm); }
+.kf-native .butActionDelete { background: var(--kf-danger); border-color: var(--kf-danger); color: var(--kf-surface); border-radius: var(--kf-radius-sm); }
+.kf-native :is(input.button[name=cancel], .butActionRefused) { background: var(--kf-surface-muted); color: var(--kf-text-secondary); border-color: var(--kf-border); }
+.kf-native :is(input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select, textarea) { border-color: var(--kf-border-strong); border-radius: var(--kf-radius-sm); background-color: var(--kf-surface); color: var(--kf-text); }
+.kf-native :is(a, button, input, select, textarea):focus-visible { outline: 3px solid var(--kf-primary); outline-offset: 2px; }
+.kf-native .tabactive { border-bottom-color: var(--kf-primary); color: var(--kf-brand-ink); }
+@media (max-width: 767px) {
+  .kf-native :is(input, select, textarea) { max-width: 100%; font-size: 16px; }
+  .kf-native .fiche { margin-left: 0; margin-right: 0; }
+}
